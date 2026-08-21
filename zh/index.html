@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>培生中国区企业业务 GTM 与发展计划</title>
+<style>
+:root{
+  --ink:#1c1828; --ink-2:#544c66; --muted:#7a7390;
+  --paper:#fbfaf8; --card:#ffffff; --line:#ece8f1; --line-2:#f3f0f7;
+  --violet:#5b2d91; --violet-deep:#37145f; --violet-2:#7a3fb0; --violet-soft:#f1eaf9;
+  --slate:#9a93a8; --slate-soft:#f3f1f6;
+  --gold:#b9801c; --gold-soft:#f7eed8;
+  --teal:#0f8a78; --rose:#bf4a40;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{margin:0;font-family:"PingFang SC","Microsoft YaHei","Hiragino Sans GB","Source Han Sans SC","Noto Sans CJK SC",sans-serif;color:var(--ink);background:var(--paper);line-height:1.78;font-size:16px;-webkit-font-smoothing:antialiased;word-break:keep-all;overflow-wrap:break-word;}
+a{color:var(--violet);text-decoration:none;}
+a:hover{text-decoration:underline;}
+
+/* Hero */
+.hero{background:linear-gradient(135deg,#ede6f7 0%,#f5f1fa 55%,#ffffff 100%);color:var(--violet-deep);padding:60px 32px 52px;position:relative;overflow:hidden;border-bottom:1px solid var(--line);}
+.hero .motif{position:absolute;right:-60px;top:-60px;width:360px;height:360px;opacity:.35;}
+.hero-inner{max-width:1180px;margin:0 auto;position:relative;z-index:1;}
+.hero .kicker{letter-spacing:.26em;text-transform:uppercase;font-size:12px;color:var(--gold);font-weight:700;}
+.hero h1{font-size:38px;line-height:1.22;margin:14px 0 10px;font-weight:800;letter-spacing:-.01em;text-wrap:balance;}
+.hero .sub{font-size:17px;opacity:1;font-weight:500;max-width:760px;color:var(--ink-2);}
+.hero .meta{margin-top:22px;display:flex;flex-wrap:wrap;gap:10px 26px;font-size:14px;opacity:1;color:var(--muted);}
+.hero .meta b{color:var(--violet);}
+
+/* Top nav */
+.topnav{position:sticky;top:0;z-index:50;background:#fff;display:flex;gap:4px;flex-wrap:wrap;padding:10px 16px;border-bottom:1px solid var(--line);box-shadow:0 2px 12px rgba(55,20,95,.06);}
+.topnav a{color:var(--ink-2);font-size:13px;padding:6px 11px;border-radius:20px;white-space:nowrap;}
+.topnav a:hover{background:var(--violet-soft);color:var(--violet-deep);text-decoration:none;}
+
+main{max-width:1180px;margin:0 auto;padding:0 24px 60px;}
+section{margin:40px 0;scroll-margin-top:64px;}
+h2{font-size:24px;color:var(--violet-deep);border-left:5px solid var(--violet);padding-left:14px;margin:34px 0 16px;font-weight:800;letter-spacing:.01em;text-wrap:balance;}
+h3{font-size:18.5px;color:var(--violet);margin:24px 0 10px;font-weight:700;text-wrap:balance;}
+h4{font-size:14.5px;color:var(--violet-2);margin:0 0 12px;letter-spacing:.02em;font-weight:700;text-wrap:balance;}
+.lead{font-size:16.5px;background:var(--violet-soft);border-radius:10px;padding:14px 18px;color:#3a2358;border-left:4px solid var(--violet);text-wrap:pretty;}
+p,li,td,blockquote{text-wrap:pretty;}
+.muted{color:var(--muted);font-size:14.5px;}
+.muted-light{color:var(--muted);}
+
+/* KPI */
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:8px 0 6px;}
+.kpi{background:var(--card);border:1px solid var(--line);border-top:3px solid var(--violet);border-radius:0 0 12px 12px;padding:18px 16px;box-shadow:0 4px 14px rgba(55,20,95,.05);}
+.kpi-num{font-size:29px;font-weight:800;color:var(--violet);line-height:1.1;letter-spacing:-.01em;}
+.kpi.gold{border-top-color:var(--gold);background:linear-gradient(180deg,#fdf8ef,#fff);}
+.kpi.gold .kpi-num{color:var(--gold);}
+.kpi-lab{font-size:13px;color:var(--muted);margin-top:7px;line-height:1.5;}
+@media(max-width:760px){.kpis{grid-template-columns:repeat(2,1fr);}.kpi-num{font-size:23px;}}
+
+/* TL;DR */
+.tldr{background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden;margin:14px 0;}
+.tldr-row{display:flex;gap:14px;padding:12px 16px;border-bottom:1px solid var(--line-2);}
+.tldr-row:last-child{border-bottom:none;}
+.t-lab{flex:0 0 64px;font-weight:800;color:var(--violet);font-size:14px;}
+.callout{background:var(--gold-soft);border-left:4px solid var(--gold);color:#5a3d05;font-weight:700;padding:14px 18px;border-radius:0 10px 10px 0;margin-top:14px;font-size:15px;}
+.quotes{display:flex;gap:16px;flex-wrap:wrap;margin-top:16px;}
+blockquote{margin:0;background:#fff;border-left:4px solid var(--violet-soft);padding:12px 16px;border-radius:0 8px 8px 0;color:#4a3a63;font-style:normal;flex:1;min-width:240px;}
+
+/* Panels */
+.panel{background:#fff;border:1px solid var(--line);border-radius:14px;padding:20px 22px;margin:16px 0;box-shadow:0 3px 12px rgba(55,20,95,.05);}
+.panel.dark{background:linear-gradient(135deg,#f8f6fc,#f1eaf9);color:var(--ink);border:1px solid #e2d9ed;}
+.panel.dark h3{color:var(--violet-deep);}
+.pillars{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px;}
+.pillar{flex:1;min-width:150px;background:var(--violet-soft);border-radius:10px;padding:12px;text-align:center;font-size:13.5px;color:#4a3a63;}
+.pillar.core{background:var(--violet);color:#fff;font-weight:700;}
+.pillar.hot{background:var(--gold);color:#3a2700;font-weight:700;}
+
+/* Charts */
+.chart-wrap{margin:16px 0;}
+.chart-card{background:#fcfbff;border:1px solid var(--line);border-radius:12px;padding:18px;}
+.svg-journey{width:100%;max-width:760px;display:block;margin:0 auto;}
+.jn-num{fill:#fff;font-size:18px;font-weight:800;}
+.jn-stage{fill:var(--violet-deep);font-size:14px;font-weight:700;}
+.jn-prod{fill:var(--ink-2);font-size:11px;}
+.jn-loop{fill:var(--violet-deep);font-size:12.5px;font-weight:700;}
+.jn-gse{fill:var(--muted);font-size:11px;}
+.ax-lab{fill:var(--muted);font-size:12px;}
+.quad-win{fill:var(--violet);font-size:11px;font-weight:700;opacity:.7;}
+.m-lab{fill:#6a6378;font-size:11px;}
+.m-lab-big{fill:var(--violet);font-size:12.5px;font-weight:800;}
+.arr-val{fill:var(--violet-deep);font-size:14px;font-weight:800;}
+.arr-lab{fill:var(--muted);font-size:11px;}
+.arr-tgt{font-size:10.5px;font-weight:700;}
+.pr-num{font-size:15px;font-weight:800;}
+.pr-lab{font-size:12px;font-weight:700;}
+.pr-note{fill:var(--muted);font-size:11.5px;}
+.ind-lab{fill:#4a3a63;font-size:12.5px;}
+.ind-val{fill:var(--violet);font-size:12.5px;font-weight:700;}
+.charts2{display:grid;grid-template-columns:1.3fr 1fr;gap:16px;}
+@media(max-width:760px){.charts2{grid-template-columns:1fr;}}
+.market-stats{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:10px;}
+.ms{flex:1;min-width:140px;background:var(--card);border:1px solid var(--line);border-bottom:3px solid var(--violet);border-radius:10px;padding:14px;text-align:center;}
+.ms-num{font-size:25px;font-weight:800;color:var(--violet);}
+.ms-lab{font-size:12.5px;color:var(--muted);margin-top:4px;}
+
+/* Tables */
+table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14.5px;background:#fff;border-radius:10px;overflow:hidden;}
+th{background:var(--violet);color:#fff;text-align:left;padding:10px 12px;font-weight:700;font-size:13.5px;}
+td{padding:9px 12px;border-bottom:1px solid var(--line-2);vertical-align:top;}
+tbody tr:nth-child(even){background:#faf8fe;}
+tbody tr:hover{background:var(--violet-soft);}
+code{background:var(--violet-soft);padding:1px 6px;border-radius:5px;font-size:13px;color:var(--violet-deep);}
+
+/* Flow */
+.flow{display:flex;align-items:center;flex-wrap:wrap;gap:6px;margin:12px 0;}
+.flow-step{background:var(--violet);color:#fff;border-radius:10px;padding:10px 12px;font-size:13.5px;font-weight:700;text-align:center;flex:1;min-width:120px;}
+.flow-step span{display:block;font-size:11px;font-weight:400;opacity:.85;margin-top:3px;}
+.flow-arrow{color:var(--violet-2);font-weight:800;}
+
+/* Cards */
+.cards3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:12px 0;}
+.cards2{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin:12px 0;}
+@media(max-width:760px){.cards3,.cards2{grid-template-columns:1fr;}}
+.scard{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px;box-shadow:0 3px 10px rgba(55,20,95,.05);}
+.scard p{font-size:14px;color:var(--muted);margin:8px 0 0;}
+.scard-tag{display:inline-block;font-size:11px;font-weight:700;padding:3px 9px;border-radius:20px;margin-bottom:8px;}
+.scard-tag.p0{background:var(--gold);color:#fff;}.scard-tag.p1{background:var(--violet-soft);color:var(--violet-deep);}.scard-tag.p2{background:var(--slate-soft);color:#5a5468;}
+.delivered{display:flex;flex-wrap:wrap;gap:10px;margin:10px 0;font-size:13.5px;}
+.ok{background:#e8f6ef;color:#15724a;padding:6px 12px;border-radius:8px;}
+.wait{background:var(--gold-soft);color:#7a5200;padding:6px 12px;border-radius:8px;}
+.lcard{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px;box-shadow:0 3px 10px rgba(55,20,95,.05);}
+.lcard p{font-size:14px;color:#3a2a52;margin:6px 0 0;}
+
+/* P0 grid */
+.p0grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:12px 0;}
+@media(max-width:760px){.p0grid{grid-template-columns:1fr;}}
+.p0card{background:#fff;border:1px solid var(--line);border-top:4px solid var(--gold);border-radius:10px;padding:14px;box-shadow:0 3px 10px rgba(55,20,95,.05);}
+.p0name{font-weight:800;color:var(--violet-deep);font-size:16px;}
+.p0pain{font-size:13px;color:#7a3b00;background:var(--gold-soft);padding:5px 8px;border-radius:6px;margin:6px 0;}
+.p0entry{font-size:13px;color:var(--muted);}
+.p0who{font-size:12.5px;color:var(--violet);margin-top:6px;}
+
+/* Buyers / timeline */
+.buyers{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:12px 0;}
+@media(max-width:760px){.buyers{grid-template-columns:1fr;}}
+.buyer{background:var(--violet-soft);border-radius:10px;padding:12px;font-size:14px;}
+.timeline{position:relative;margin:18px 0;padding-left:8px;}
+.tl-item{display:flex;gap:16px;padding:14px 0;border-left:3px solid var(--violet-soft);padding-left:18px;position:relative;}
+.tl-item::before{content:"";position:absolute;left:-9px;top:18px;width:14px;height:14px;border-radius:50%;background:var(--violet);}
+.tl-phase{flex:0 0 130px;font-weight:800;color:var(--violet);}
+.tl-body{font-size:14.5px;}
+.asks li{margin:8px 0;}
+
+/* Appendix */
+.appendix{background:#fcfbff;border:1px solid var(--line);border-radius:14px;padding:20px 22px;margin:30px 0;}
+.appendix h2{color:var(--violet);}
+.doc-body h3{color:var(--violet-deep);border-left:4px solid var(--violet);padding-left:10px;margin:22px 0 10px;font-size:18px;}
+.doc-body h4{color:var(--violet);margin:18px 0 8px;font-size:15.5px;}
+.doc-body h5{color:var(--violet-2);margin:14px 0 6px;font-size:14px;}
+.doc-body blockquote{background:var(--violet-soft);border:1px solid var(--line);border-left:4px solid var(--violet);border-radius:0 10px 10px 0;padding:12px 16px;margin:12px 0;color:#4a3a63;font-size:14px;}
+.doc-body p{font-size:14.5px;margin:10px 0;}
+.doc-body li{margin:6px 0;font-size:14.5px;line-height:1.7;}
+.doc-body hr{border:none;border-top:1px solid var(--line);margin:20px 0;}
+.doc-body table th,.doc-body table td{white-space:normal;word-break:keep-all;}
+.doc-body table th{min-width:90px;}
+
+/* Appendix index cards (main doc) */
+.appx-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:14px 0;}
+.appx-card{display:flex;flex-direction:column;gap:6px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 16px;text-decoration:none;color:inherit;transition:box-shadow .15s,transform .15s;box-shadow:0 2px 8px rgba(55,20,95,.04);}
+.appx-card:hover{box-shadow:0 6px 18px rgba(55,20,95,.12);transform:translateY(-2px);text-decoration:none;}
+.appx-tag{font-size:11px;font-weight:800;letter-spacing:.08em;color:#fff;background:var(--violet);display:inline-block;width:fit-content;padding:2px 9px;border-radius:999px;}
+.appx-title{font-size:15px;font-weight:800;color:var(--violet-deep);}
+.appx-desc{font-size:12.5px;color:var(--muted);line-height:1.6;}
+.appx-open{font-size:12.5px;font-weight:700;color:var(--violet);}
+@media(max-width:760px){.appx-grid{grid-template-columns:1fr;}}
+/* Standalone appendix page */
+body.appx{background:var(--paper);}
+.appx-hero{background:linear-gradient(135deg,#ede6f7 0%,#f5f1fa 55%,#ffffff 100%);color:var(--violet-deep);padding:34px 32px 30px;border-bottom:1px solid var(--line);}
+.appx-hero .kicker{color:var(--violet-2);font-size:12px;font-weight:700;letter-spacing:.12em;}
+.appx-hero h1{margin:8px 0 0;font-size:26px;line-height:1.35;}
+.appx-back{display:inline-block;margin-bottom:14px;font-size:13.5px;font-weight:700;color:var(--violet);background:#fff;border:1px solid var(--line);border-radius:999px;padding:6px 14px;text-decoration:none;}
+.appx-back:hover{background:var(--violet-soft);text-decoration:none;}
+body.appx main{max-width:960px;margin:0 auto;padding:26px 24px 60px;}
+body.appx .appendix{margin:0 0 26px;}
+
+.ammo{margin:0;padding-left:18px;}
+.ammo li{margin:7px 0;font-size:14.5px;}
+.src{font-size:14px;padding-left:18px;}
+.src li{margin:7px 0;}
+footer{text-align:center;color:var(--muted);font-size:13px;padding:30px;border-top:1px solid var(--line);}
+
+@media print{
+  body{background:#fff;}
+  .topnav{display:none;}
+  .hero{background:#f5f1fa !important;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+  .panel,.kpi,section{break-inside:avoid;}
+  *{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+}
+</style>
+</head>
+<body>
+<header class="hero">
+<svg class="motif" viewBox="0 0 360 360" aria-hidden="true"><circle cx="180" cy="180" r="150" fill="none" stroke="#e7c98a" stroke-width="1.5" opacity=".5"/><circle cx="180" cy="180" r="110" fill="none" stroke="#e7c98a" stroke-width="1" opacity=".35"/><circle cx="180" cy="180" r="70" fill="none" stroke="#e7c98a" stroke-width="1" opacity=".25"/><path d="M180 30 A150 150 0 0 1 330 180" fill="none" stroke="#e7c98a" stroke-width="2.5" opacity=".7"/></svg>
+<div class="hero-inner">
+<div class="kicker">Pearson · Enterprise Skilling · China</div>
+<h1>培生中国区企业业务 GTM 与发展计划</h1>
+<div class="sub">不是「再开一个国家」，而是培生企业技能增长支柱的地面落地——攻打中国出海企业的语言能力缺口。</div>
+<div class="meta">
+<span>汇报人：<b>Hans Zhang 张思航</b></span>
+<span>时间：<b>2026-08-24 ~ 08-28</b> · Mark 中国之行</span>
+<span>版本：<b>v4.0 内部讨论稿</b></span>
+</div>
+</div>
+</header>
+
+<nav class="topnav" aria-label="目录">
+  <a href="#s0">摘要</a><a href="#s1">市场</a><a href="#s2">定位</a><a href="#s3">GTM</a>
+  <a href="#s4">打法</a><a href="#s5">触达</a><a href="#s6">客户</a><a href="#s7">快赢</a>
+  <a href="#s8">长线</a><a href="#s9">路线图</a><a href="#s10">风险</a><a href="#s11">要支持</a>
+  <a href="#s12">待澄清</a><a href="#appendix">附录 A–F</a>
+</nav><main>
+
+<section id="s0">
+  <h2>第 0 节 · 执行摘要（一页纸）</h2>
+  <div class="lead">中国区企业业务不是「再开一个国家」，而是培生 <b>企业技能（Enterprise Skilling）</b> 增长支柱的地面落地——攻打的是：麦肯锡所言 <b>超 50%</b> 中企称为最艰巨国际化挑战、哈佛 Neeley 研究 <b>78%</b> 陷「人才断层」（<b>45%</b> 因跨文化致项目延期）的语言能力缺口。</div>
+  <div class="tldr">
+    <div class="tldr-row"><span class="t-lab">机会</span><span>70% 中国企业已出海；外派失败率高达 40%；海外中国员工超 180 万——语言能力如今是营收的前置条件，而非 HR 成本。</span></div>
+    <div class="tldr-row"><span class="t-lab">定位</span><span>全球唯一跑通以 GSE 为统一量尺的「测评→学习→验证」闭环。企业出海暴露度越高，我们的价值越大。</span></div>
+    <div class="tldr-row"><span class="t-lab">打法</span><span>以 <b>Versant 韦尚</b> 为低摩擦楔子切入 → <b>Mondly 蒙德利</b> 扩展；诊断钩子 + 联合销售桥梁放大。</span></div>
+    <div class="tldr-row"><span class="t-lab">现状</span><span>50 家客户体系已跑；9 家 P0；5 家 P0 决策人已识别；3 份诊断已交付；联合销售分层已建。<b>不是从零开始。</b></span></div>
+    <div class="tldr-row"><span class="t-lab">12个月</span><span>15–20 个付费客户 · 年度收入超 1000 万 · 续约率 ≥90% · 2+ 中国本土案例。</span></div>
+    <div class="tldr-row"><span class="t-lab">需集团支持</span><span>中国定价权 · 境内托管决策 · 本地化时间表 · 引荐 Sharon / Vishaal · 全球案例授权 · 本地售前/客户成功人头。</span></div>
+  </div>
+</section>
+<section id="s1">
+  <h2>第一节 · 为什么是中国、为什么是现在</h2>
+  <div class="lead">中国出海浪潮已从「产品出海」走到「能力出海」，而语言是麦肯锡所言超 50% 中企称为最艰巨国际化挑战、78%（Neeley，哈佛）陷「人才断层」的瓶颈。</div>
+  <table>
+    <thead><tr><th>信号</th><th>来源</th></tr></thead>
+    <tbody>
+      <tr><td>70% 受调企业已出海；67% 将出海列为未来 1–3 年 top-1–3 战略</td><td>德勤中国 / 澳洲会计师公会，2025-26 中国出海调查</td></tr>
+      <tr><td>超 50% 企业将人才短缺列为最艰巨国际化挑战</td><td>麦肯锡，2025</td></tr>
+      <tr><td>78% 中国出海企业陷「人才断层」；45% 因跨文化摩擦致项目延期</td><td>哈佛商学院 Neeley，2025</td></tr>
+      <tr><td>外派失败率高达 <b>40%</b>（靠简历选人，无标准化语言测评）</td><td>行业调查，2026</td></tr>
+      <tr><td>制造业对外直接投资存量 <b>超 4200 亿美元</b>；2.6 万+ 海外工厂；<b>海外中国员工超 180 万</b></td><td>中国贸促会 CCPIT，2026</td></tr>
+      <tr><td>80%+ 制造商将「持续的国际人才培养」列为头号资源优先级</td><td>中国机电商会 CCCME，2026</td></tr>
+      <tr><td>语言互通可使贸易量 <b>+44%</b></td><td>学术研究</td></tr>
+    </tbody>
+  </table>
+  <div class="chart-wrap">
+    <div class="chart-card">
+      <h4>市场形态：盘子足够大，且正在结构性转向</h4>
+      <div class="market-stats">
+        <div class="ms"><div class="ms-num">&gt;¥3000亿</div><div class="ms-lab">企业英语培训市场（已突破）</div></div>
+        <div class="ms"><div class="ms-num">&gt;50%</div><div class="ms-lab">数字化 / AI 方案占比</div></div>
+        <div class="ms"><div class="ms-num">&gt;20%</div><div class="ms-lab">年复合增速 CAGR</div></div>
+      </div>
+      <p class="muted">需求已从通用课程转向<b>场景化、岗位化、结果导向</b>的劳动力项目——正是我们的车道。购买权已从 HR 扩展到<b>海外业务负责人</b>（真正感受外派失败和本地化卡顿的预算持有者）。</p>
+    </div>
+  </div>
+</section>
+<section id="s2">
+  <h2>第二节 · 战略定位（我们凭啥赢）</h2>
+  <div class="lead">要看 <i>我们为何赢</i>，得先从客户的工作出发：把一支员工的英语岗位能力抬上去，本身就是一条多阶段旅程。培生是唯一在一条尺子（GSE）上为每个阶段都备好产品的玩家。</div>
+
+  <div class="panel">
+    <h3>2.1 我们在集团战略里的位置</h3>
+    <p>培生战略（Journey Story / Our Strategy）：<b>1 项核心能力</b> = 测评与验证（AI 时代信任的基石）；<b>3 大增长支柱</b> = 下一代教育 · 早期职业 · <b>企业技能</b>。→ 中国区企业 GTM = 企业技能支柱的落地执行，卖给企业的是「在工作的流动中」的语言能力。</p>
+    <div class="pillars">
+      <div class="pillar core">核心能力<br><b>测评与验证</b></div>
+      <div class="pillar">增长支柱 ①<br>下一代教育</div>
+      <div class="pillar">增长支柱 ②<br>早期职业</div>
+      <div class="pillar hot">增长支柱 ③<br><b>企业技能 ◀ 我们在这</b></div>
+    </div>
+  </div>
+
+  <div class="panel dark">
+    <h3>2.2 提升员工英语岗位能力的全流程（客户的「待办工作」）</h3>
+    <p class="muted">任何想把员工英语岗位能力抬上去的公司——无论为海外派驻、跨境团队，还是客户-facing 岗位——走的都是同一条循环。这跟厂商无关，是工作本身。能陪客户走完每一步、且用同一把尺子的厂商，才真正握住了这段关系。</p>
+    <svg viewBox="0 0 760 250" class="svg-journey" role="img" aria-label="能力提升闭环旅程"><line x1="80" y1="96" x2="680" y2="96" stroke="#e7dcf3" stroke-width="6" stroke-linecap="round"/><line x1="110" y1="96" x2="170" y2="96" stroke="#cdbbe6" stroke-width="2.5"/><path d="M170 96 l-9 -5 v10 z" fill="#cdbbe6"/><circle cx="80" cy="96" r="29" fill="#5b2d91"/><text x="80" y="102" text-anchor="middle" class="jn-num">1</text><text x="80" y="154" text-anchor="middle" class="jn-stage">诊断</text><text x="80" y="172" text-anchor="middle" class="jn-prod">Versant 韦尚</text><line x1="230" y1="96" x2="290" y2="96" stroke="#cdbbe6" stroke-width="2.5"/><path d="M290 96 l-9 -5 v10 z" fill="#cdbbe6"/><circle cx="200" cy="96" r="29" fill="#5b2d91"/><text x="200" y="102" text-anchor="middle" class="jn-num">2</text><text x="200" y="154" text-anchor="middle" class="jn-stage">定标</text><text x="200" y="172" text-anchor="middle" class="jn-prod">GSE 岗位画像</text><line x1="350" y1="96" x2="410" y2="96" stroke="#cdbbe6" stroke-width="2.5"/><path d="M410 96 l-9 -5 v10 z" fill="#cdbbe6"/><circle cx="320" cy="96" r="29" fill="#5b2d91"/><text x="320" y="102" text-anchor="middle" class="jn-num">3</text><text x="320" y="154" text-anchor="middle" class="jn-stage">学习</text><text x="320" y="172" text-anchor="middle" class="jn-prod">Mondly 蒙德利</text><line x1="470" y1="96" x2="530" y2="96" stroke="#cdbbe6" stroke-width="2.5"/><path d="M530 96 l-9 -5 v10 z" fill="#cdbbe6"/><circle cx="440" cy="96" r="29" fill="#5b2d91"/><text x="440" y="102" text-anchor="middle" class="jn-num">4</text><text x="440" y="154" text-anchor="middle" class="jn-stage">在岗练习</text><text x="440" y="172" text-anchor="middle" class="jn-prod">沟通教练</text><line x1="590" y1="96" x2="650" y2="96" stroke="#cdbbe6" stroke-width="2.5"/><path d="M650 96 l-9 -5 v10 z" fill="#cdbbe6"/><circle cx="560" cy="96" r="29" fill="#5b2d91"/><text x="560" y="102" text-anchor="middle" class="jn-num">5</text><text x="560" y="154" text-anchor="middle" class="jn-stage">验证</text><text x="560" y="172" text-anchor="middle" class="jn-prod">PEIC 证书</text><circle cx="680" cy="96" r="29" fill="#5b2d91"/><text x="680" y="102" text-anchor="middle" class="jn-num">6</text><text x="680" y="154" text-anchor="middle" class="jn-stage">度量</text><text x="680" y="172" text-anchor="middle" class="jn-prod">复测 + 季报</text><path d="M680 140 C 700 215, 60 215, 80 140" fill="none" stroke="#5b2d91" stroke-width="2.5" stroke-dasharray="2 6" marker-end="url(#arr)"/><text x="380" y="210" text-anchor="middle" class="jn-loop">度量驱动再诊断 · 闭环持续</text><text x="380" y="234" text-anchor="middle" class="jn-gse">全过程以 GSE 同一把尺子贯通</text><defs><marker id="arr" markerWidth="9" markerHeight="9" refX="5" refY="4" orient="auto"><path d="M0 0 L9 4 L0 8 z" fill="#5b2d91"/></marker></defs></svg>
+  </div>
+
+  <div class="panel">
+    <h3>2.3 培生如何为每一步赋能</h3>
+    <p>流程的每个阶段都对应一款培生产品，而且所有产品说的是同一种语言：<b>全球英语量表（GSE）</b>。</p>
+    <table>
+      <thead><tr><th>旅程阶段</th><th>培生产品</th><th>中国角色</th></tr></thead>
+      <tbody>
+        <tr><td>诊断</td><td><b>Versant 韦尚</b> — AI 四项技能测试，7×24，即时出分</td><td>楔子（招聘 / 外派 / 复测）</td></tr>
+        <tr><td>定标</td><td><b>GSE / 岗位画像</b> — 约 1400 个岗位的英语基准</td><td>岗位标准武器</td></tr>
+        <tr><td>学习</td><td><b>Mondly 蒙德利</b>（Essential/Enhanced/Ultimate）、<b>Mondly VR</b>、<b>Pearson English Connect</b></td><td>扩展（培训）</td></tr>
+        <tr><td>在岗练习</td><td><b>Communication Coach 沟通教练</b>（嵌入 Teams，与微软共建）、<b>Digital Language Tutor</b></td><td>AI 时代故事</td></tr>
+        <tr><td>验证</td><td><b>PEIC</b> — 国际英语证书</td><td>验证收口</td></tr>
+        <tr><td>度量与再循环</td><td><b>Versant 复测 + 季度能力报告</b></td><td>落进 L&D 预算</td></tr>
+      </tbody>
+    </table>
+    <p class="muted">因为六步都坐在 GSE 上，环节间无缝衔接：Versant 分数喂给岗位画像目标，目标喂给 Mondly 学习路径，路径喂给沟通教练练习环，最后收口于 PEIC 凭证与一次证明「涨了」的复测。<b>一把尺子，一条数据线。</b></p>
+  </div>
+
+  <div class="panel">
+    <h3>2.4 为什么这让我们成了「唯一闭环」（我们为何赢）</h3>
+    <p>没有对手能在同一把尺子上覆盖全部六个阶段。缺口是结构性的——下图横轴是测评深度、纵轴是学习/验证闭环，培生独占右上角获胜象限：</p>
+    <div class="chart-wrap"><div class="chart-card"><svg viewBox="0 0 600 470" role="img" aria-label="竞品能力矩阵"><rect x="310" y="60" width="220" height="175" fill="rgba(91,45,145,.07)"/><rect x="90" y="235" width="220" height="175" fill="rgba(154,147,168,.06)"/><line x1="90.0" y1="60" x2="90.0" y2="410" stroke="#edeaf2"/><line x1="200.0" y1="60" x2="200.0" y2="410" stroke="#edeaf2"/><line x1="310.0" y1="60" x2="310.0" y2="410" stroke="#edeaf2"/><line x1="420.0" y1="60" x2="420.0" y2="410" stroke="#edeaf2"/><line x1="530.0" y1="60" x2="530.0" y2="410" stroke="#edeaf2"/><line x1="90" y1="410.0" x2="530" y2="410.0" stroke="#edeaf2"/><line x1="90" y1="322.5" x2="530" y2="322.5" stroke="#edeaf2"/><line x1="90" y1="235.0" x2="530" y2="235.0" stroke="#edeaf2"/><line x1="90" y1="147.5" x2="530" y2="147.5" stroke="#edeaf2"/><line x1="90" y1="60.0" x2="530" y2="60.0" stroke="#edeaf2"/><line x1="310" y1="60" x2="310" y2="410" stroke="#b9aecb" stroke-width="1.5" stroke-dasharray="5 5"/><line x1="90" y1="235" x2="530" y2="235" stroke="#b9aecb" stroke-width="1.5" stroke-dasharray="5 5"/><rect x="90" y="60" width="440" height="350" fill="none" stroke="#cdbbe6"/><text x="310" y="448" text-anchor="middle" class="ax-lab">测评深度 →</text><text x="30" y="235" text-anchor="middle" class="ax-lab" transform="rotate(-90 30 235)">学习 / 验证闭环 →</text><text x="450" y="78" text-anchor="middle" class="quad-win">获胜象限</text><circle cx="464.0" cy="112.5" r="19" fill="rgba(91,45,145,.18)"/><circle cx="464.0" cy="112.5" r="12" fill="#5b2d91" stroke="#fff" stroke-width="2"/><text x="450.0" y="116.5" text-anchor="end" class="m-lab-big">培生 Pearson</text><circle cx="200.0" cy="130.0" r="8" fill="#9a93a8" stroke="#fff" stroke-width="1.5"/><text x="214.0" y="134.0" text-anchor="start" class="m-lab">英孚 EF</text><circle cx="332.0" cy="347.0" r="8" fill="#9a93a8" stroke="#fff" stroke-width="1.5"/><text x="346.0" y="351.0" text-anchor="start" class="m-lab">北森 Beisen</text><circle cx="442.0" cy="333.0" r="8" fill="#9a93a8" stroke="#fff" stroke-width="1.5"/><text x="428.0" y="337.0" text-anchor="end" class="m-lab">托业 TOEIC</text><circle cx="450.8" cy="287.5" r="8" fill="#9a93a8" stroke="#fff" stroke-width="1.5"/><text x="436.8" y="291.5" text-anchor="end" class="m-lab">剑桥领思 Linguaskill</text></svg></div></div>
+    <table>
+      <thead><tr><th>对比</th><th>他们在旅程里卡在哪</th><th>我们的优势</th></tr></thead>
+      <tbody>
+        <tr><td><b>北森 Beisen / Moka</b>（HR SaaS）</td><td>英语只是 7 个测评维度之一；无 GSE 基准；无培训闭环——止步于「诊断」</td><td>他们占 HR 入口；我们占完整旅程</td></tr>
+        <tr><td><b>英孚 EF</b>（教育优先）</td><td>课程无岗位靶向测评；无招聘侧测评——强在「学习」，缺「诊断」与「验证」</td><td>测评+学习+验证一体，可量化商业论证</td></tr>
+        <tr><td><b>托业 TOEIC</b>（点考）</td><td>只考不练，口语弱，无岗位映射——止步于「诊断/验证」</td><td>全闭环 + 口语优先 + 岗位画像</td></tr>
+        <tr><td><b>剑桥领思 Linguaskill</b></td><td>AI-CEFR 测评（阿迪达斯/西门子/汇丰/德勤在用）；强在「诊断/验证」，无 GSE 岗位映射、无学习闭环</td><td>全闭环 + GSE 岗位画像（1400 岗）+ 分钟级出分 + Mondly 扩展</td></tr>
+      </tbody>
+    </table>
+    <p>差异化不在于「我们产品更多」，而在于<b>我们是唯一能陪客户用一把尺子走完整条能力旅程的厂商</b>。这，就是我们为何赢。</p>
+  </div>
+
+  <div class="panel">
+    <h3>2.5 集团弹药（FY25 年报 + 财报电话会 + 内网）</h3>
+    <ul class="ammo">
+      <li><b>企业学习技能（ELS）2025 年组建全球企业销售团队</b>，签下 9 家合作（微软/亚马逊云/谷歌云；HCLTech/Cognizant/IBM），锁定收入到 2030 年达数十亿级。</li>
+      <li><b>Mondly 已全面转向机构/企业</b>（CEO 阿博什原话）——我们的中国打法对齐集团战略。</li>
+      <li><b>培生 × 亚马逊云</b>「将 AI 就绪推向全球」（华盛顿→印尼）——中国类比：Azure / 阿里云 / 腾讯云。</li>
+      <li><b>ELS 2024 年销售 2.26 亿英镑</b>（不含 ITP）——中国计入这个池子。</li>
+      <li><b>Lost in Transition 报告</b>（培生全球洞察）——为我们 pitch 提供权威背书。</li>
+      <li><b>「飞向安全（Flight to safety）」叙事</b>（阿博什）：AI 生成内容泛滥时代，企业要可信、可验证的技能——正是 Versant/PEIC 的位置。</li>
+    </ul>
+  </div>
+</section>
+<section id="s3">
+  <h2>第三节 · GTM 战略（我们怎么选、怎么玩）</h2>
+  <div class="lead">我们按 <i>出海暴露度</i> 筛选（感受到痛的企业才付钱），用低摩擦的 Versant 楔子切入，靠联合销售放大——而不是和 HR 平台正面硬刚。</div>
+  <h3>3.1 细分主轴：出海强度（第一轴）</h3>
+  <table>
+    <thead><tr><th>细分</th><th>含义</th><th>打法</th></tr></thead>
+    <tbody>
+      <tr><td>海外营收 ≥40%（或绝对值 ≥100 亿）</td><td>高暴露</td><td>P0 直销 + 全旅程</td></tr>
+      <tr><td>大型海外团队 + 英语门槛</td><td>高痛</td><td>Versant 批量筛查</td></tr>
+      <tr><td>出海 0→1</td><td>早期</td><td>诊断钩子培育</td></tr>
+      <tr><td>行业：制造 / 新能源 / 电商 BPO / EPC</td><td>场景需求</td><td>行业内容包</td></tr>
+    </tbody>
+  </table>
+  <h3>3.2 目标逻辑：五步目标闭环（已在跑）</h3>
+  <div class="flow">
+    <div class="flow-step">① 池子筛选<span>一次性</span></div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-step">② 优先级分层<span>一次性</span></div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-step">③ 周度信号监测<span>每周一自动化</span></div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-step">④ 决策人挖掘<span>持续补全</span></div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-step">⑤ 语言诊断 + 联合销售桥<span>触发式，售前</span></div>
+  </div>
+  <p class="muted">切入硬门槛（任一即可）：海外营收 ≥40%（或 ≥100 亿）/ 顶级出口商 / 大型海外团队 + 英语门槛 / 活跃海外并购或建厂 / 出海 0→1。</p>
+  <h3>3.3 渠道模型：直销灯塔 + 联合销售放量</h3>
+  <ul>
+    <li><b>P0 灯塔 = 直销：</b>高价值、定制诊断、面对面决策人。</li>
+    <li><b>放量 = 联合销售杠杆：</b>北森 / 美世 / 德勤 把培生语言能力嵌入他们的客户旅程。</li>
+    <li><b>逐客户定「嵌入还是竞争」：</b>北森既是竞争者也是渠道——它的 AI 面试官缺真正的英语测评；Versant 填这个坑。</li>
+  </ul>
+  <h3>3.4 定价姿态：楔子低、全旅程高</h3>
+  <ul>
+    <li><b>Versant 作楔子：</b>单价低、决策链短（招聘/HR 就能买）、分钟级出分——先抓企业语言数据。</li>
+    <li><b>数据驱动扩展：</b>用测评结果卖 Mondly（先落地再扩张）。</li>
+    <li><b>验证与度量旅程赚溢价：</b>Versant→岗位画像→Mondly→季度复测的能力报告，是高价值交付，落进 L&D 预算。</li>
+  </ul>
+</section>
+<section id="s4">
+  <h2>第四节 · 我们怎么卖（战术打法）</h2>
+  <div class="lead">Versant 用最短决策链敲门；诊断钩子转化；联合销售把名字变成会议。</div>
+  <h3>4.1 核心：Versant 楔子 + Mondly 扩展</h3>
+  <p><i>为什么先 Versant：</i>决策链最短（招聘/HR 买）、单价低、分钟级出分、数据驱动——而且数据 <i>逼出</i> 学习对话：「你 2000 个客服 GSE 42–54 分；这是拉起来的培训。」</p>
+  <div class="cards3">
+    <div class="scard"><div class="scard-tag p0">场景 1 · 优先</div><b>外派甄选</b><p>GSE/CEFR 门槛筛查；直接攻打 40% 外派失败率。</p></div>
+    <div class="scard"><div class="scard-tag p1">场景 2</div><b>批量招聘筛查</b><p>客服 / BPO / 电商 / 销售岗；可复制，按席位定价。</p></div>
+    <div class="scard"><div class="scard-tag p2">场景 3</div><b>培训 ROI 度量</b><p>训前/训后 Mondly 复测；把 L&D 支出变成量化商业论证。</p></div>
+  </div>
+  <h3>4.2 语言诊断钩子（已转化的武器，已验证）</h3>
+  <p>已迭代到「公开招聘信号国际对标」形态：把目标公司的海外招聘 JD 全量爬下来（迈瑞 113 个国际岗），与罗氏 / 希森美康 / 佳能 / 西门子等全球同行按 L0–L3 信号编码对标，量化"中国出海体量第一 vs 语言管理停在口号级"的代差，直接成为 30 分钟免费验证的销售钩子。</p>
+  <div class="delivered">
+    <span class="ok">✅ 已交付：迈瑞医疗（信号对标报告，n=113 全量快照）</span>
+    <span class="ok">✅ 已交付：比亚迪 / 海尔（信号对标报告 + 诊断 v3）</span>
+    <span class="wait">⏳ 待交付（余 6 家 P0）：宁德时代 / 奇瑞 / 传音 / 字节 / SHEIN / 美的</span>
+  </div>
+  <p class="fn"><a href="appendix_f.html" target="_blank" rel="noopener">→ 交付物全文：迈瑞出海语言信号对标报告（附录 F，新窗口打开）</a></p>
+  <h3>4.3 分层解决方案矩阵</h3>
+  <table>
+    <thead><tr><th>层级</th><th>场景</th><th>组合</th><th>产出</th><th>预算</th></tr></thead>
+    <tbody>
+      <tr><td>轻量诊断</td><td>早期探索</td><td>Versant SLT（17–20 分钟）</td><td>组织口语基线 + 缺口热力图</td><td>按次，低门槛</td></tr>
+      <tr><td>完整诊断</td><td>规模化出海</td><td>Versant 四项 + 岗位画像</td><td>四项报告 + 岗位达标矩阵</td><td>中</td></tr>
+      <tr><td>培训</td><td>缺口清晰</td><td>Mondly 企业版（Enhanced/Ultimate）</td><td>个性化学习路径</td><td>按许可/年</td></tr>
+      <tr><td>全闭环</td><td>深度本地化</td><td>Versant→岗位画像→Mondly→复测</td><td>季度能力报告 + ROI</td><td>混合，进 L&D</td></tr>
+    </tbody>
+  </table>
+  <h3>4.4 联合销售桥梁（名字 → 会议）</h3>
+  <table>
+    <thead><tr><th>层级</th><th>伙伴</th><th>价值交换</th></tr></thead>
+    <tbody>
+      <tr><td>P0</td><td><b>北森 Beisen</b></td><td>客户含奇瑞/长安出海；AI 面试官缺真正英语测试 → Versant 填补</td></tr>
+      <tr><td>P0</td><td><b>美世 Mercer</b></td><td>出海人才方案 + Mettl；办出海论坛</td></tr>
+      <tr><td>P0</td><td><b>德勤 Deloitte</b></td><td>中国到全球每年助力 2000+ 中国企业；白皮书背书</td></tr>
+      <tr><td>P1</td><td>WTW / 光辉国际 / 怡安</td><td>嵌入客户 CHRO 侧</td></tr>
+      <tr><td>P1</td><td>Moka / Kenexa</td><td>HR SaaS，可嵌入语言模块</td></tr>
+      <tr><td>P2</td><td>出海 SI / 服务商</td><td>绑定出海服务链</td></tr>
+    </tbody>
+  </table>
+  <p class="muted">对北森的一句话：他们占 HR 流程入口；我们占语言深度。</p>
+  <h3>4.5 买家地图与暖引荐</h3>
+  <div class="buyers">
+    <div class="buyer"><b>经济买家</b>：CHRO / HR 副总裁 / CFO / 业务线总裁（签字）</div>
+    <div class="buyer"><b>冠军</b>：学习发展总监 / 国际人才负责人（驱动）</div>
+    <div class="buyer"><b>影响者</b>：海外业务负责人、IT、采购</div>
+    <div class="buyer"><b>C 级（大单）</b>：CEO / 出海业务总裁</div>
+  </div>
+</section>
+<section id="s5">
+  <h2>第五节 · 客户触达与渠道策略（怎么找到决策人、怎么建联系）</h2>
+  <div class="lead">把 50 家目标账户从「名单」变成「会议」，需要一套可执行的触达体系。真实的企业 GTM 至少有三档九条渠道——<b>P0 暖启动（杠杆最高）、P1 规模化、P2 补充</b>——而非依赖单一联合销售路径。</div>
+
+  <h3>5.1 先锁定"找谁"：决策人画像</h3>
+  <p>触达前必须知道敲谁的门。企业语言力预算的持有者分四类，痛点不同，主推产品也不同：</p>
+  <table>
+    <thead><tr><th>角色</th><th>典型 title</th><th>核心痛点</th><th>主推产品</th></tr></thead>
+    <tbody>
+      <tr><td>经济买家</td><td>CHRO / 人力资源副总裁 / CFO</td><td>招聘质量、培训 ROI、出海人才储备</td><td>Versant + Mondly</td></tr>
+      <tr><td>冠军（驱动者）</td><td>学习发展总监 / 国际人才负责人</td><td>员工在岗英语提升、学习完课率</td><td>Mondly</td></tr>
+      <tr><td>影响者</td><td>招聘总监 / 海外业务负责人</td><td>面试语言测评效率、外派失败</td><td>Versant</td></tr>
+      <tr><td>C 级（大单）</td><td>CEO / 出海业务总裁</td><td>海外团队沟通、本地化卡顿</td><td>Mondly + Versant</td></tr>
+    </tbody>
+  </table>
+
+  <h3>5.2 渠道全景：三档九条</h3>
+  <div class="callout">原则：<b>暖启动 &gt; 冷启动</b>——关系与转介绍在中国 B2B 的转化率是冷邮的数倍。难度以 ★ 表示，越多越易启动。</div>
+  <table>
+    <thead><tr><th>优先级</th><th>渠道</th><th>怎么玩</th><th>启动难易度</th></tr></thead>
+    <tbody>
+      <tr><td><b>P0</b></td><td>行业协会 / 工商联</td><td>全国工商联、贸促会 CCPIT、各行业商会（对外承包工程商会、机电商会）；做"出海人才 / 语言力"合作单位 → 闭门私享会、联合白皮书、年会演讲</td><td>★★★★★ 现成会员清单 + 决策人，培生教育背书强</td></tr>
+      <tr><td><b>P0</b></td><td>生态 co-sell 扩圈（不止北森）</td><td>Microsoft / AWS 账户团队带单；HR SaaS 用友 / 金蝶 / Moka；招聘 RPO 科锐国际 / FESCO / 中智；咨询 DDI / 光辉国际</td><td>★★★★★ 借他人客群，错位不抢</td></tr>
+      <tr><td><b>P0</b></td><td>ABM 精准打 50 家（暖引荐优先）</td><td>每家配 1 个决策人画像 + 1 条暖路径（Mark / 中国区 CEO / Microsoft AM 引荐优先于 cold）</td><td>★★★★ 名单已存在，只差建联</td></tr>
+      <tr><td><b>P1</b></td><td>行业 / HR 峰会赞助 + 演讲</td><td>HRoot 人力资本论坛、北森生态大会、出海峰会（EqualOcean / 亿邦）、WAIC 的 AI + 学习；以"中国企业出海语言 ready 度"为题收名片</td><td>★★★★ 品牌曝光强，需内容准备</td></tr>
+      <tr><td><b>P1</b></td><td>脉脉 + LinkedIn 定向 outbound</td><td>按 50 家清单搜 CHRO / L&D → 加好友 → 发价值内容 → 约 1v1；LinkedIn 打有海外业务的决策人</td><td>★★★★ 中国 B2B 找人最狠渠道</td></tr>
+      <tr><td><b>P1</b></td><td>内容 / 白皮书 inbound</td><td>公众号 + LinkedIn 发《中国企业出海语言力白皮书》、Versant 提效案例，配免费 GSE 测评 demo 换线索</td><td>★★★ 慢热但可持续产出</td></tr>
+      <tr><td><b>P2</b></td><td>陌生拜访 / 冷邮冷 call</td><td>ABM 补充；配免费 pilot 试用作钩子</td><td>★★ 效率低，别当主力</td></tr>
+      <tr><td><b>P2</b></td><td>商学院 / EMBA 校友</td><td>长江 / 中欧 / 清华 EMBA 校友多是目标决策人，通过校友活动触达</td><td>★★★ 需校友身份</td></tr>
+      <tr><td><b>P2</b></td><td>出海服务商 co-referral</td><td>出海律所（金杜）、德勤 / 安永出海服务线、跨境支付——它们先接触出海企业，互相引荐</td><td>★★★ 需建伙伴</td></tr>
+    </tbody>
+  </table>
+
+  <h3>5.3 关键纠正：别赞助"学术会议"</h3>
+  <div class="callout"><b>学术会议（教授、研究员、高校）不是企业买家</b>，赞助了也收不到 CHRO 的名片；企业要的是 <b>HR / 人力资本 / 培训 / 出海 / AI + 学习</b> 类峰会。前者建学术声誉，后者才换会议与销售线索。培生的学术关系（PTE / English Connect）留在「品牌背书」，企业获客走行业峰会。</div>
+
+  <h3>5.4 30 天建立联系落地节奏</h3>
+  <div class="flow">
+    <div class="flow-step">① 具名决策人<span>脉脉 / 企查查 / LinkedIn 给 50 家找出具名的人</span></div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-step">② A/B/C 分层<span>按出海强度 + 员工规模</span></div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-step">③ 暖路径优先<span>Mark / 中国区 CEO / Microsoft AM 引荐</span></div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-step">④ 入会<span>挑 2–3 个对口行业协会</span></div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-step">⑤ 脉脉节奏<span>每天加 5 人、发 1 条价值内容</span></div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-step">⑥ 钩子破冰<span>免费 Versant 试点一个招聘周期</span></div>
+  </div>
+
+  <h3>5.5 钩子：用免费 Versant 试点破冰</h3>
+  <p>用"免费 / 低价 Versant 试点一个招聘周期（200–500 测试）→ 给 CHRO / 海外 GM 一份 GSE 基线报告"作为破冰理由。报告本身就是下一轮 Mondly 扩展的引子（见第四节诊断钩子）。这把"陌生拜访"变成"对方主动要解读报告"。</p>
+
+  <p class="muted">渠道策略一句话：<b>P0 三件套（协会 + 生态 co-sell + ABM 暖引荐）打底，P1 峰会 + 脉脉 + 内容做量，P2 冷启动与校友做补充。</b></p>
+</section>
+  <section id="s6">
+  <h2>第六节 · 目标客户（打谁：50 家客户体系）</h2>
+  <div class="lead">这份名单是上面五步闭环 + 出海强度细分的 <i>产出</i>，不是随机花名册。</div>
+  <div class="charts2">
+    <div class="chart-card">
+      <h4>行业分布（50 家 · 紫色=前三优先级行业）</h4>
+      <svg viewBox="0 0 600 390" role="img" aria-label="行业分布"><text x="0" y="30" class="ind-lab">消费电子/互联网/电商</text><rect x="180" y="10" width="400.0" height="20" rx="4" fill="#5b2d91"/><text x="588.0" y="26" class="ind-val">11</text><text x="0" y="74" class="ind-lab">医疗器械/医药/CXO</text><rect x="180" y="54" width="363.6" height="20" rx="4" fill="#5b2d91"/><text x="551.6" y="70" class="ind-val">10</text><text x="0" y="118" class="ind-lab">新能源/车/电池</text><rect x="180" y="98" width="327.3" height="20" rx="4" fill="#5b2d91"/><text x="515.3" y="114" class="ind-val">9</text><text x="0" y="162" class="ind-lab">汽车</text><rect x="180" y="142" width="254.5" height="20" rx="4" fill="#bdb6cb"/><text x="442.5" y="158" class="ind-val">7</text><text x="0" y="206" class="ind-lab">工程机械</text><rect x="180" y="186" width="145.5" height="20" rx="4" fill="#bdb6cb"/><text x="333.5" y="202" class="ind-val">4</text><text x="0" y="250" class="ind-lab">家电</text><rect x="180" y="230" width="145.5" height="20" rx="4" fill="#bdb6cb"/><text x="333.5" y="246" class="ind-val">4</text><text x="0" y="294" class="ind-lab">基建</text><rect x="180" y="274" width="145.5" height="20" rx="4" fill="#bdb6cb"/><text x="333.5" y="290" class="ind-val">4</text><text x="0" y="338" class="ind-lab">化工</text><rect x="180" y="318" width="36.4" height="20" rx="4" fill="#bdb6cb"/><text x="224.4" y="334" class="ind-val">1</text></svg>
+    </div>
+    <div class="chart-card">
+      <h4>优先级分布（聚焦 9 家 P0）</h4>
+      <svg viewBox="0 0 600 130" role="img" aria-label="优先级分布"><rect x="20.0" y="52" width="86.4" height="34" rx="4" fill="#b9801c"/><text x="63.2" y="44" text-anchor="middle" class="pr-num" fill="#1c1828">9</text><text x="63.2" y="102" text-anchor="middle" class="pr-lab" fill="#b9801c">P0</text><rect x="106.4" y="52" width="326.4" height="34" rx="4" fill="#5b2d91"/><text x="269.6" y="44" text-anchor="middle" class="pr-num" fill="#1c1828">34</text><text x="269.6" y="102" text-anchor="middle" class="pr-lab" fill="#5b2d91">P1</text><rect x="432.8" y="52" width="67.2" height="34" rx="4" fill="#9a93a8"/><text x="466.4" y="44" text-anchor="middle" class="pr-num" fill="#1c1828">7</text><text x="466.4" y="102" text-anchor="middle" class="pr-lab" fill="#9a93a8">P2</text><text x="20" y="26" class="pr-note">50 家目标账户 · 聚焦 9 家 P0（三条硬指标全中 + 窗口期）</text></svg>
+    </div>
+  </div>
+  <h3>6.2 P0 九家（优先战场）</h3>
+  <div class="p0grid">
+    <div class="p0card"><div class="p0name">迈瑞医疗</div><div class="p0pain">2025 海外营收 53%，首次超国内</div><div class="p0entry">海外销售/临床英语 + 外派培训</div><div class="p0who">李在文（全球市场 SVP）✅ 诊断已交付</div></div>
+    <div class="p0card"><div class="p0name">比亚迪</div><div class="p0pain">汽车 + 储能双出海，激进海外建厂</div><div class="p0entry">外派 + 本地化团队英语</div><div class="p0who">Stella Li / 李柯 ✅ 诊断已交付</div></div>
+    <div class="p0card"><div class="p0name">宁德时代</div><div class="p0pain">全球建厂（欧/美/东南亚）</div><div class="p0entry">海外工厂英语 + 安全沟通</div><div class="p0who">待挖掘</div></div>
+    <div class="p0card"><div class="p0name">奇瑞</div><div class="p0pain">2025 出口 134 万辆，连续第一</div><div class="p0entry">海外经销商网络英语</div><div class="p0who">张贵兵（国际 GM）</div></div>
+    <div class="p0card"><div class="p0name">传音</div><div class="p0pain">「非洲之王」，新兴市场深</div><div class="p0entry">本地化运营英语</div><div class="p0who">待挖掘</div></div>
+    <div class="p0card"><div class="p0name">字节跳动</div><div class="p0pain">TikTok 多国合规</div><div class="p0entry">跨文化 + 合规英语</div><div class="p0who">Ronnie（HR 负责人）</div></div>
+    <div class="p0card"><div class="p0name">SHEIN</div><div class="p0pain">跨境快时尚全球化</div><div class="p0entry">供应链 / 客服英语</div><div class="p0who">待挖掘</div></div>
+    <div class="p0card"><div class="p0name">海尔</div><div class="p0pain">全球品牌（GEA / Fisher &amp; Paykel）</div><div class="p0entry">国际 CHRO 级项目</div><div class="p0who">于文涛（国际 CHRO）✅ 诊断已交付</div></div>
+    <div class="p0card"><div class="p0name">美的</div><div class="p0pain">海外营收近半，全球制造</div><div class="p0entry">海外工厂 + 研发英语</div><div class="p0who">待挖掘</div></div>
+  </div>
+  <p class="muted">完整 50 家名单（含信号、切入点、决策人抬头）→ 见 <a href="appendix_a.html" target="_blank" rel="noopener">附录 A（新窗口打开）</a>。</p>
+</section>
+  <section id="s7">
+  <h2>第七节 · 快赢（0–90 天）</h2>
+  <div class="lead">第一季度落 3–5 个 Versant 试点客户、≥2 单付费合同；合规与本地化并行启动。</div>
+  <table>
+    <thead><tr><th>目标</th><th>关键动作</th></tr></thead>
+    <tbody>
+      <tr><td>3–5 个试点客户</td><td>从 P0 挑 3–5 家；免费/低价 Versant 试点（200–500 测试）→ GSE 基线报告给 CHRO / 海外 GM</td></tr>
+      <tr><td>首批付费合同</td><td>≥2 单 Versant 合同；≥5000 测试</td></tr>
+      <tr><td>2–3 个渠道</td><td>行业协会 / 工商联 MOU + 联合销售签约（北森 / 美世 优先）</td></tr>
+      <tr><td>合规启动</td><td>个人信息保护法 PIPL / 数据出境评估启动；数据保护官 DPO / 法务对齐</td></tr>
+      <tr><td>中文销售包</td><td>Demo / 白皮书 / 合同模板本地化；中国定价体系</td></tr>
+    </tbody>
+  </table>
+</section>
+  <section id="s8">
+  <h2>第八节 · 长线（6–18 个月并行打地基）</h2>
+  <div class="lead">卖的同时，必须建本地地基（产品、托管、生态、组织），把快赢变成持久生意。</div>
+  <div class="cards2">
+    <div class="lcard"><h4>8.1 产品本地化</h4><p>中文界面（Mondly / 沟通教练）；微信 / 企业微信 / 飞书集成；移动优先。中国行业包：出海制造、跨境电商、EPC、客服英语。把 GSE 翻译成 HR 语言：「这个人实际能干啥」。</p></div>
+    <div class="lcard"><h4>8.2 境内托管与合规（关键路径）</h4><p>PIPL / 数据安全法：语音 / 学员数据境内存储评估。<b>数据出境安全评估</b>（出境场景强制）。<b>第二季度决策：境内部署 vs 合规离岸</b>——影响延迟、价格、企业采购接受度。本地合同（双语）、增值税专票、人民币定价。</p></div>
+    <div class="lcard"><h4>8.3 生态与认可</h4><p>HR SaaS 集成（北森 / Moka / 用友）：Versant 分数流入现有人才系统。PEIC 企业认可路径（对比托业；「下一代口语优先证书」）。中国本土案例库（本地证据 &gt; 全球引用）。</p></div>
+    <div class="lcard"><h4>8.4 组织</h4><p>本地销售 + 售前 + 客户成功；中国定价权。指标：激活、复测 GSE 提升、续约/净收入留存——不止看许可数。</p></div>
+  </div>
+</section>
+  <section id="s9">
+  <h2>第九节 · 路线图与指标（12 个月）</h2>
+  <div class="lead">三个阶段爬坡；第一年退出门槛是年度收入超 1000 万、续约 ≥90%、2+ 本土案例。</div>
+  <div class="timeline">
+    <div class="tl-item"><div class="tl-phase">Q1 · 0–3月</div><div class="tl-body"><b>重点：</b>3–5 试点；首批 Versant 合同；合规评估；中文包<br><b>退出门槛：</b>≥2 付费；≥5000 测试</div></div>
+    <div class="tl-item"><div class="tl-phase">Q2 · 3–6月</div><div class="tl-body"><b>重点：</b>扩到 8–10；1–2 个 Mondly 项目；2–3 渠道；<b>托管决策</b><br><b>退出门槛：</b>≥5 付费；首个学习上线</div></div>
+    <div class="tl-item"><div class="tl-phase">Q3–Q4 · 6–12月</div><div class="tl-body"><b>重点：</b>扩到 15–20；3–5 渠道；本地化 v1；PEIC 路径<br><b>退出门槛：</b><b>年度收入超 1000 万</b>；续约 ≥90%；2+ 中国案例</div></div>
+  </div>
+  <p class="muted">指标：付费客户数 / Versant 测试数 / Mondly 激活与完成 / 复测 GSE 提升 / 客单 ACV / 续约 / 渠道管线占比。</p>
+</section>
+  <section id="s10">
+  <h2>第十节 · 风险与缓解</h2>
+  <div class="lead">真正能拦我们的两个是数据合规和长决策链——都有现在就能启动的缓解。</div>
+  <table>
+    <thead><tr><th>风险</th><th>缓解</th></tr></thead>
+    <tbody>
+      <tr><td>数据合规（语音 / 学员数据）卡采购</td><td>现在就启动合规流程；Q2 托管决策；DPO / 法务对齐</td></tr>
+      <tr><td>本地低价竞争</td><td>靠测评效度 + GSE + 品牌差异化；打包不打折</td></tr>
+      <tr><td>决策链长 / 预算砍</td><td>低摩擦测试切入；卖给海外业务负责人，不只 HR</td></tr>
+      <tr><td>北森 / 平台竞争</td><td>竞合：逐客户定嵌入还是竞争</td></tr>
+      <tr><td>培生中国品牌像「教育/留学」</td><td>企业定位：行业活动、CHRO 圆桌、本土案例</td></tr>
+    </tbody>
+  </table>
+</section>
+  <section id="s11">
+  <h2>第十一节 · 需要 Mark 支持的事项</h2>
+  <div class="lead">七项请求；前三项（定价、托管、本地化时间表）为门槛级决策，需集团层面拍板。</div>
+  <ol class="asks">
+    <li><b>中国定价权</b> —— 对比托业 / 英孚 / 剑桥领思的本地打包与折扣。</li>
+    <li><b>境内托管决策</b> —— 模式 + 预算 + 时间表；PIPL 数据出境评估的 DPO 支持。</li>
+    <li><b>本地化时间表</b> —— 中文界面（Mondly / 沟通教练）、微信 / 企业微信 / 飞书集成日期。</li>
+    <li><b>引荐 Sharon Hague（ELL）&amp; Vishaal Gupta（ELS）</b> —— 30 分钟对齐，借全球资产给中国。</li>
+    <li><b>销售赋能</b> —— 中文 Demo / 白皮书 / 合同模板；中国测试配额。</li>
+    <li><b>全球案例授权</b> —— iQor / Smart Axiata / Nikkei / Cognizant / IGA 用于中国提案。</li>
+    <li><b>本地人头</b> —— 售前 / 客户成功（本地招 vs 远程）。</li>
+  </ol>
+</section>
+  <section id="s12">
+  <h2>第十二节 · 待澄清问题（供管理层讨论）</h2>
+  <ol class="asks">
+    <li>直销优先还是渠道优先？<i>（建议：P0 灯塔直销，渠道放量。）</i></li>
+    <li>Versant 定价 —— 对标托业，还是溢价「口语优先」差异化？</li>
+    <li>第一年境内托管，还是合规离岸起步？</li>
+    <li>头 2–3 个中国行业内容包（制造 / 电商 BPO / EPC）？</li>
+    <li>中国第一年年度收入目标：<b>500万 / 1000万 / 2000万？</b></li>
+  </ol>
+</section>
+<section id="appendix" class="appendix">
+  <h2>附录 A–F — 支撑材料（点击新窗口打开）</h2>
+  <p class="muted">以下支撑材料均内嵌于交付包，按需查看：点击卡片在新窗口打开独立页面，看完关闭即可回到正文。</p>
+  <div class="appx-grid">
+    <a class="appx-card" href="appendix_a.html" target="_blank" rel="noopener">
+      <span class="appx-tag">附录 A</span>
+      <span class="appx-title">50 家出海目标账户清单（全表）</span>
+      <span class="appx-desc">企业级大客户（300万+ 项目）拓客靶心全表：海外收入占比 / 海外用工规模 / 语言门槛信号 / 切入点 / 决策人。</span>
+      <span class="appx-open">打开 ↗</span>
+    </a>
+    <a class="appx-card" href="appendix_b.html" target="_blank" rel="noopener">
+      <span class="appx-tag">附录 B</span>
+      <span class="appx-title">出海情报筛选方法论</span>
+      <span class="appx-desc">50 家目标账户系统背后的筛选逻辑：数据源、信号权重、维护节奏、局限声明。</span>
+      <span class="appx-open">打开 ↗</span>
+    </a>
+    <a class="appx-card" href="appendix_c.html" target="_blank" rel="noopener">
+      <span class="appx-tag">附录 C</span>
+      <span class="appx-title">第一年 ARR 测算桥</span>
+      <span class="appx-desc">500万 / 1000万 / 2000万 背后的「客户数 × 客单」瀑布模型与敏感性假设。</span>
+      <span class="appx-open">打开 ↗</span>
+    </a>
+    <a class="appx-card" href="appendix_d.html" target="_blank" rel="noopener">
+      <span class="appx-tag">附录 D</span>
+      <span class="appx-title">竞品格局（全表）</span>
+      <span class="appx-desc">北森 / 英孚 / 托业 / 剑桥领思 逐一对照：他们卡在哪，我们占什么。</span>
+      <span class="appx-open">打开 ↗</span>
+    </a>
+    <a class="appx-card" href="appendix_e.html" target="_blank" rel="noopener">
+      <span class="appx-tag">附录 E</span>
+      <span class="appx-title">数据来源与脚注</span>
+      <span class="appx-desc">正文每一条关键数据的出处、口径与使用边界——管理层点检用。</span>
+      <span class="appx-open">打开 ↗</span>
+    </a>
+    <a class="appx-card" href="appendix_f.html" target="_blank" rel="noopener">
+      <span class="appx-tag">附录 F</span>
+      <span class="appx-title">迈瑞医疗 · 出海语言信号对标报告（最新钩子）</span>
+      <span class="appx-desc">公开招聘信号国际对标：日本同行 × 欧美巨头 × 迈瑞全量 n=113 快照。L0–L3 信号编码：迈瑞 113 岗零量化，罗氏 5 岗全 CEFR——「出海肌肉 5 分，语言刻度 0 分」的最新证据。</span>
+      <span class="appx-open">打开 ↗</span>
+    </a>
+  </div>
+</section><footer>培生中国区企业业务 GTM 与发展计划 · v4.0 · 内部资料，仅供中国区管理层讨论使用</footer>
+</main>
+</body>
+</html>

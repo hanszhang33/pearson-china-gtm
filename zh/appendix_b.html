@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>附录 B — 出海情报筛选方法论（50 家目标账户系统） · 培生中国区企业业务 GTM</title>
+<style>
+:root{
+  --ink:#1c1828; --ink-2:#544c66; --muted:#7a7390;
+  --paper:#fbfaf8; --card:#ffffff; --line:#ece8f1; --line-2:#f3f0f7;
+  --violet:#5b2d91; --violet-deep:#37145f; --violet-2:#7a3fb0; --violet-soft:#f1eaf9;
+  --slate:#9a93a8; --slate-soft:#f3f1f6;
+  --gold:#b9801c; --gold-soft:#f7eed8;
+  --teal:#0f8a78; --rose:#bf4a40;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{margin:0;font-family:"PingFang SC","Microsoft YaHei","Hiragino Sans GB","Source Han Sans SC","Noto Sans CJK SC",sans-serif;color:var(--ink);background:var(--paper);line-height:1.78;font-size:16px;-webkit-font-smoothing:antialiased;word-break:keep-all;overflow-wrap:break-word;}
+a{color:var(--violet);text-decoration:none;}
+a:hover{text-decoration:underline;}
+
+/* Hero */
+.hero{background:linear-gradient(135deg,#ede6f7 0%,#f5f1fa 55%,#ffffff 100%);color:var(--violet-deep);padding:60px 32px 52px;position:relative;overflow:hidden;border-bottom:1px solid var(--line);}
+.hero .motif{position:absolute;right:-60px;top:-60px;width:360px;height:360px;opacity:.35;}
+.hero-inner{max-width:1180px;margin:0 auto;position:relative;z-index:1;}
+.hero .kicker{letter-spacing:.26em;text-transform:uppercase;font-size:12px;color:var(--gold);font-weight:700;}
+.hero h1{font-size:38px;line-height:1.22;margin:14px 0 10px;font-weight:800;letter-spacing:-.01em;text-wrap:balance;}
+.hero .sub{font-size:17px;opacity:1;font-weight:500;max-width:760px;color:var(--ink-2);}
+.hero .meta{margin-top:22px;display:flex;flex-wrap:wrap;gap:10px 26px;font-size:14px;opacity:1;color:var(--muted);}
+.hero .meta b{color:var(--violet);}
+
+/* Top nav */
+.topnav{position:sticky;top:0;z-index:50;background:#fff;display:flex;gap:4px;flex-wrap:wrap;padding:10px 16px;border-bottom:1px solid var(--line);box-shadow:0 2px 12px rgba(55,20,95,.06);}
+.topnav a{color:var(--ink-2);font-size:13px;padding:6px 11px;border-radius:20px;white-space:nowrap;}
+.topnav a:hover{background:var(--violet-soft);color:var(--violet-deep);text-decoration:none;}
+
+main{max-width:1180px;margin:0 auto;padding:0 24px 60px;}
+section{margin:40px 0;scroll-margin-top:64px;}
+h2{font-size:24px;color:var(--violet-deep);border-left:5px solid var(--violet);padding-left:14px;margin:34px 0 16px;font-weight:800;letter-spacing:.01em;text-wrap:balance;}
+h3{font-size:18.5px;color:var(--violet);margin:24px 0 10px;font-weight:700;text-wrap:balance;}
+h4{font-size:14.5px;color:var(--violet-2);margin:0 0 12px;letter-spacing:.02em;font-weight:700;text-wrap:balance;}
+.lead{font-size:16.5px;background:var(--violet-soft);border-radius:10px;padding:14px 18px;color:#3a2358;border-left:4px solid var(--violet);text-wrap:pretty;}
+p,li,td,blockquote{text-wrap:pretty;}
+.muted{color:var(--muted);font-size:14.5px;}
+.muted-light{color:var(--muted);}
+
+/* KPI */
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:8px 0 6px;}
+.kpi{background:var(--card);border:1px solid var(--line);border-top:3px solid var(--violet);border-radius:0 0 12px 12px;padding:18px 16px;box-shadow:0 4px 14px rgba(55,20,95,.05);}
+.kpi-num{font-size:29px;font-weight:800;color:var(--violet);line-height:1.1;letter-spacing:-.01em;}
+.kpi.gold{border-top-color:var(--gold);background:linear-gradient(180deg,#fdf8ef,#fff);}
+.kpi.gold .kpi-num{color:var(--gold);}
+.kpi-lab{font-size:13px;color:var(--muted);margin-top:7px;line-height:1.5;}
+@media(max-width:760px){.kpis{grid-template-columns:repeat(2,1fr);}.kpi-num{font-size:23px;}}
+
+/* TL;DR */
+.tldr{background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden;margin:14px 0;}
+.tldr-row{display:flex;gap:14px;padding:12px 16px;border-bottom:1px solid var(--line-2);}
+.tldr-row:last-child{border-bottom:none;}
+.t-lab{flex:0 0 64px;font-weight:800;color:var(--violet);font-size:14px;}
+.callout{background:var(--gold-soft);border-left:4px solid var(--gold);color:#5a3d05;font-weight:700;padding:14px 18px;border-radius:0 10px 10px 0;margin-top:14px;font-size:15px;}
+.quotes{display:flex;gap:16px;flex-wrap:wrap;margin-top:16px;}
+blockquote{margin:0;background:#fff;border-left:4px solid var(--violet-soft);padding:12px 16px;border-radius:0 8px 8px 0;color:#4a3a63;font-style:normal;flex:1;min-width:240px;}
+
+/* Panels */
+.panel{background:#fff;border:1px solid var(--line);border-radius:14px;padding:20px 22px;margin:16px 0;box-shadow:0 3px 12px rgba(55,20,95,.05);}
+.panel.dark{background:linear-gradient(135deg,#f8f6fc,#f1eaf9);color:var(--ink);border:1px solid #e2d9ed;}
+.panel.dark h3{color:var(--violet-deep);}
+.pillars{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px;}
+.pillar{flex:1;min-width:150px;background:var(--violet-soft);border-radius:10px;padding:12px;text-align:center;font-size:13.5px;color:#4a3a63;}
+.pillar.core{background:var(--violet);color:#fff;font-weight:700;}
+.pillar.hot{background:var(--gold);color:#3a2700;font-weight:700;}
+
+/* Charts */
+.chart-wrap{margin:16px 0;}
+.chart-card{background:#fcfbff;border:1px solid var(--line);border-radius:12px;padding:18px;}
+.svg-journey{width:100%;max-width:760px;display:block;margin:0 auto;}
+.jn-num{fill:#fff;font-size:18px;font-weight:800;}
+.jn-stage{fill:var(--violet-deep);font-size:14px;font-weight:700;}
+.jn-prod{fill:var(--ink-2);font-size:11px;}
+.jn-loop{fill:var(--violet-deep);font-size:12.5px;font-weight:700;}
+.jn-gse{fill:var(--muted);font-size:11px;}
+.ax-lab{fill:var(--muted);font-size:12px;}
+.quad-win{fill:var(--violet);font-size:11px;font-weight:700;opacity:.7;}
+.m-lab{fill:#6a6378;font-size:11px;}
+.m-lab-big{fill:var(--violet);font-size:12.5px;font-weight:800;}
+.arr-val{fill:var(--violet-deep);font-size:14px;font-weight:800;}
+.arr-lab{fill:var(--muted);font-size:11px;}
+.arr-tgt{font-size:10.5px;font-weight:700;}
+.pr-num{font-size:15px;font-weight:800;}
+.pr-lab{font-size:12px;font-weight:700;}
+.pr-note{fill:var(--muted);font-size:11.5px;}
+.ind-lab{fill:#4a3a63;font-size:12.5px;}
+.ind-val{fill:var(--violet);font-size:12.5px;font-weight:700;}
+.charts2{display:grid;grid-template-columns:1.3fr 1fr;gap:16px;}
+@media(max-width:760px){.charts2{grid-template-columns:1fr;}}
+.market-stats{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:10px;}
+.ms{flex:1;min-width:140px;background:var(--card);border:1px solid var(--line);border-bottom:3px solid var(--violet);border-radius:10px;padding:14px;text-align:center;}
+.ms-num{font-size:25px;font-weight:800;color:var(--violet);}
+.ms-lab{font-size:12.5px;color:var(--muted);margin-top:4px;}
+
+/* Tables */
+table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14.5px;background:#fff;border-radius:10px;overflow:hidden;}
+th{background:var(--violet);color:#fff;text-align:left;padding:10px 12px;font-weight:700;font-size:13.5px;}
+td{padding:9px 12px;border-bottom:1px solid var(--line-2);vertical-align:top;}
+tbody tr:nth-child(even){background:#faf8fe;}
+tbody tr:hover{background:var(--violet-soft);}
+code{background:var(--violet-soft);padding:1px 6px;border-radius:5px;font-size:13px;color:var(--violet-deep);}
+
+/* Flow */
+.flow{display:flex;align-items:center;flex-wrap:wrap;gap:6px;margin:12px 0;}
+.flow-step{background:var(--violet);color:#fff;border-radius:10px;padding:10px 12px;font-size:13.5px;font-weight:700;text-align:center;flex:1;min-width:120px;}
+.flow-step span{display:block;font-size:11px;font-weight:400;opacity:.85;margin-top:3px;}
+.flow-arrow{color:var(--violet-2);font-weight:800;}
+
+/* Cards */
+.cards3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:12px 0;}
+.cards2{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin:12px 0;}
+@media(max-width:760px){.cards3,.cards2{grid-template-columns:1fr;}}
+.scard{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px;box-shadow:0 3px 10px rgba(55,20,95,.05);}
+.scard p{font-size:14px;color:var(--muted);margin:8px 0 0;}
+.scard-tag{display:inline-block;font-size:11px;font-weight:700;padding:3px 9px;border-radius:20px;margin-bottom:8px;}
+.scard-tag.p0{background:var(--gold);color:#fff;}.scard-tag.p1{background:var(--violet-soft);color:var(--violet-deep);}.scard-tag.p2{background:var(--slate-soft);color:#5a5468;}
+.delivered{display:flex;flex-wrap:wrap;gap:10px;margin:10px 0;font-size:13.5px;}
+.ok{background:#e8f6ef;color:#15724a;padding:6px 12px;border-radius:8px;}
+.wait{background:var(--gold-soft);color:#7a5200;padding:6px 12px;border-radius:8px;}
+.lcard{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px;box-shadow:0 3px 10px rgba(55,20,95,.05);}
+.lcard p{font-size:14px;color:#3a2a52;margin:6px 0 0;}
+
+/* P0 grid */
+.p0grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:12px 0;}
+@media(max-width:760px){.p0grid{grid-template-columns:1fr;}}
+.p0card{background:#fff;border:1px solid var(--line);border-top:4px solid var(--gold);border-radius:10px;padding:14px;box-shadow:0 3px 10px rgba(55,20,95,.05);}
+.p0name{font-weight:800;color:var(--violet-deep);font-size:16px;}
+.p0pain{font-size:13px;color:#7a3b00;background:var(--gold-soft);padding:5px 8px;border-radius:6px;margin:6px 0;}
+.p0entry{font-size:13px;color:var(--muted);}
+.p0who{font-size:12.5px;color:var(--violet);margin-top:6px;}
+
+/* Buyers / timeline */
+.buyers{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:12px 0;}
+@media(max-width:760px){.buyers{grid-template-columns:1fr;}}
+.buyer{background:var(--violet-soft);border-radius:10px;padding:12px;font-size:14px;}
+.timeline{position:relative;margin:18px 0;padding-left:8px;}
+.tl-item{display:flex;gap:16px;padding:14px 0;border-left:3px solid var(--violet-soft);padding-left:18px;position:relative;}
+.tl-item::before{content:"";position:absolute;left:-9px;top:18px;width:14px;height:14px;border-radius:50%;background:var(--violet);}
+.tl-phase{flex:0 0 130px;font-weight:800;color:var(--violet);}
+.tl-body{font-size:14.5px;}
+.asks li{margin:8px 0;}
+
+/* Appendix */
+.appendix{background:#fcfbff;border:1px solid var(--line);border-radius:14px;padding:20px 22px;margin:30px 0;}
+.appendix h2{color:var(--violet);}
+.doc-body h3{color:var(--violet-deep);border-left:4px solid var(--violet);padding-left:10px;margin:22px 0 10px;font-size:18px;}
+.doc-body h4{color:var(--violet);margin:18px 0 8px;font-size:15.5px;}
+.doc-body h5{color:var(--violet-2);margin:14px 0 6px;font-size:14px;}
+.doc-body blockquote{background:var(--violet-soft);border:1px solid var(--line);border-left:4px solid var(--violet);border-radius:0 10px 10px 0;padding:12px 16px;margin:12px 0;color:#4a3a63;font-size:14px;}
+.doc-body p{font-size:14.5px;margin:10px 0;}
+.doc-body li{margin:6px 0;font-size:14.5px;line-height:1.7;}
+.doc-body hr{border:none;border-top:1px solid var(--line);margin:20px 0;}
+.doc-body table th,.doc-body table td{white-space:normal;word-break:keep-all;}
+.doc-body table th{min-width:90px;}
+
+/* Appendix index cards (main doc) */
+.appx-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:14px 0;}
+.appx-card{display:flex;flex-direction:column;gap:6px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 16px;text-decoration:none;color:inherit;transition:box-shadow .15s,transform .15s;box-shadow:0 2px 8px rgba(55,20,95,.04);}
+.appx-card:hover{box-shadow:0 6px 18px rgba(55,20,95,.12);transform:translateY(-2px);text-decoration:none;}
+.appx-tag{font-size:11px;font-weight:800;letter-spacing:.08em;color:#fff;background:var(--violet);display:inline-block;width:fit-content;padding:2px 9px;border-radius:999px;}
+.appx-title{font-size:15px;font-weight:800;color:var(--violet-deep);}
+.appx-desc{font-size:12.5px;color:var(--muted);line-height:1.6;}
+.appx-open{font-size:12.5px;font-weight:700;color:var(--violet);}
+@media(max-width:760px){.appx-grid{grid-template-columns:1fr;}}
+/* Standalone appendix page */
+body.appx{background:var(--paper);}
+.appx-hero{background:linear-gradient(135deg,#ede6f7 0%,#f5f1fa 55%,#ffffff 100%);color:var(--violet-deep);padding:34px 32px 30px;border-bottom:1px solid var(--line);}
+.appx-hero .kicker{color:var(--violet-2);font-size:12px;font-weight:700;letter-spacing:.12em;}
+.appx-hero h1{margin:8px 0 0;font-size:26px;line-height:1.35;}
+.appx-back{display:inline-block;margin-bottom:14px;font-size:13.5px;font-weight:700;color:var(--violet);background:#fff;border:1px solid var(--line);border-radius:999px;padding:6px 14px;text-decoration:none;}
+.appx-back:hover{background:var(--violet-soft);text-decoration:none;}
+body.appx main{max-width:960px;margin:0 auto;padding:26px 24px 60px;}
+body.appx .appendix{margin:0 0 26px;}
+
+.ammo{margin:0;padding-left:18px;}
+.ammo li{margin:7px 0;font-size:14.5px;}
+.src{font-size:14px;padding-left:18px;}
+.src li{margin:7px 0;}
+footer{text-align:center;color:var(--muted);font-size:13px;padding:30px;border-top:1px solid var(--line);}
+
+@media print{
+  body{background:#fff;}
+  .topnav{display:none;}
+  .hero{background:#f5f1fa !important;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+  .panel,.kpi,section{break-inside:avoid;}
+  *{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+}
+</style>
+</head>
+<body class="appx">
+<header class="appx-hero">
+<a class="appx-back" href="index.html">← 返回主报告</a>
+<div class="kicker">Pearson · Enterprise Skilling · China · 附录</div>
+<h1>附录 B — 出海情报筛选方法论（50 家目标账户系统）</h1>
+</header>
+<main>
+
+<section id="appb" class="appendix">
+  <h2>附录 B — 出海情报筛选方法论（50 家目标账户系统）</h2>
+  <blockquote>用途：Pearson 企业级大客户（300 万+，Versant 测评 + Mondly 培训）拓客靶心筛选与持续情报监控的<strong>完整方法论</strong>。 本文档将原先散落在 5 份文件（作战手册 / 目标清单 / 决策人 SOP / 诊断模板 / co-sell 手册）中的规则收敛为一套可执行、可复制的筛选与运作体系。 配套数据表：<code>出海情报追踪.csv</code>（主表，14 列 50 行） / <code>出海情报追踪.xlsx</code>（可视化筛选） / <code>出海情报库.md</code>（每周归档）。</blockquote>
+<p>---</p>
+<h3>§0 方法论总览（五步闭环）</h3>
+<pre></pre>
+<p>  ① 目标池筛选 → ② 优先级分层 → ③ 每周信号监控 → ④ 决策人挖掘 → ⑤ 语言力诊断 + co-sell 桥</p>
+<p>        (一次性)        (一次性)        (每周一自动化)     (持续补全)      (按需触发，进单前置)</p>
+<pre></pre>
+<p>核心假设：<strong>企业出海 = 语言力刚需 = Pearson 切入点</strong>。所有筛选动作都围绕「海外收入占比 / 海外销量目标 / 大规模海外用工 + 英语门槛」三个硬指标展开。</p>
+<p>---</p>
+<h3>§1 目标池筛选逻辑（50 家怎么选出来的）</h3>
+<h4>1.1 入围条件（满足其一即可入池）</h4>
+<table><thead><tr><th>#</th><th>硬条件</th><th>判断数据来源</th></tr></thead><tbody><tr><td>1</td><td>海外收入占比高（≥40%，或绝对值≥100 亿）</td><td>年报/半年报</td></tr><tr><td>2</td><td>海外销量/出口量行业前列（整车出口前 10、组件出货第一梯队等）</td><td>中汽协/行业协会/公司公告</td></tr><tr><td>3</td><td>大规模海外用工：海外工厂/子公司/项目团队，且招聘要求英语工作语言</td><td>招聘平台（猎聘/BOSS/校招官网）</td></tr><tr><td>4</td><td>海外并购/建厂/合资进行中（跨文化整合刚需）</td><td>新闻/公告</td></tr><tr><td>5</td><td>出海数字化 0→1（跨境电商、海外仓、数字银行、海外 App）</td><td>新闻/行业媒体</td></tr></tbody></table>
+<h4>1.2 行业池结构（50 家的分布）</h4>
+<table><thead><tr><th>行业</th><th>家数</th><th>代表</th></tr></thead><tbody><tr><td>医疗器械/医药/CXO</td><td>10</td><td>迈瑞、联影、药明康德、恒瑞、百济、复星、英科、鱼跃、微创、万泰</td></tr><tr><td>新能源/车/电池</td><td>9</td><td>比亚迪、宁德、隆基、晶科、天合、阳光、阿特斯、远景、奇瑞</td></tr><tr><td>汽车</td><td>7</td><td>上汽、吉利、长城、长安、蔚来、福耀、三一(工程机械并车)</td></tr><tr><td>消费电子/互联网/电商</td><td>11</td><td>华为、小米、传音、OPPO、安克、字节、腾讯、米哈游、SHEIN、Temu、阿里国际、快手</td></tr><tr><td>工程机械</td><td>4</td><td>三一、中联、徐工、柳工</td></tr><tr><td>家电</td><td>4</td><td>海尔、美的、海信、格力</td></tr><tr><td>基建</td><td>4</td><td>中交、中建、中铁、电建</td></tr><tr><td>化工</td><td>1</td><td>万华</td></tr></tbody></table>
+<h4>1.3 排除标准</h4>
+<p>  无真实出海业务/计划、员工规模 \</p>
+<p>---</p>
+<h3>§2 优先级分层（P0 / P1 / P2）</h3>
+<table><thead><tr><th>层级</th><th>数量</th><th>判定标准</th><th>颜色（xlsx）</th><th>跟进策略</th></tr></thead><tbody><tr><td><strong>P0</strong></td><td>9</td><td>三条硬指标全中（海外收入占比高 + 大规模海外实体 + 大规模用工英语门槛），且正处于建厂/并购/数字化 0→1 窗口期</td><td>橙</td><td>重点投入：诊断报告优先做、决策人优先挖、co-sell 优先搭桥</td></tr><tr><td><strong>P1</strong></td><td>34</td><td>两条命中，出海确定性高但暂无非做不可的窗口事件</td><td>黄</td><td>常规监控 + 窗口事件触发升级</td></tr><tr><td><strong>P2</strong></td><td>7</td><td>一条命中或尚在布局期</td><td>绿</td><td>维持监控，事件触发升级</td></tr></tbody></table>
+<blockquote>分层可动态调整：基建四强（P2）因集中新签大额海外 EPC，在 7/20 与 8/17 周报中连续被标记为「有效信号」，若再持续可整体升 P1。</blockquote>
+<p>---</p>
+<h3>§3 每周信号监控框架（周一自动化）</h3>
+<h4>3.1 监控的四类信号</h4>
+<table><thead><tr><th>信号类型</th><th>示例</th><th>语言力商机含义</th></tr></thead><tbody><tr><td>① 出海新动作/海外营收披露</td><td>建厂、并购、海外总部迁移、出口量纪录</td><td>建厂/整合期英语力刚需</td></tr><tr><td>② 高管或 HR 负责人变动</td><td>新总裁、新 CHRO、海外业务一号位调整</td><td>新官上任窗口期，决策链换血</td></tr><tr><td>③ 出海岗大规模招聘</td><td>猎聘/BOSS/校招官网国际岗</td><td>招聘门槛 = 测评 + 培训切入点</td></tr><tr><td>④ 海外项目/招标/订单</td><td>EPC 大单、海外仓、储能订单</td><td>项目团队中外协作英语</td></tr></tbody></table>
+<h4>3.2 执行流程（每个周一跑一次，约 30 次 WebSearch）</h4>
+<pre></pre>
+<ol><li>读 target_accounts_50.md 的 50 家名单</li><li>对每家 WebSearch：公司名 + 「出海/海外/国际化」+ 近一周关键词（建厂/招聘/出口/签约）</li><li>命中 → 记录：公司 / 信号日期 / 信号内容 / 商机含义 / 下一步动作</li><li>写入三件套：</li></ol>
+<ul><li>出海情报追踪.csv  信号列覆盖更新（不追加重复行，保留 14 列 50 行）</li><li>出海情报追踪.xlsx  regen_xlsx.py 重新生成（P0 橙 / P1 黄 / P2 绿、首行冻结、自动筛选）</li><li>出海情报库.md      顶部插入「### YYYY-MM-DD 周报」区块（TOP5 urgent + P0/P1/P2 分组）</li></ul>
+<ol><li>写自动化 memory.md（执行摘要）</li></ol>
+<pre></pre>
+<h4>3.3 周报结构（归档格式）</h4>
+<p>  本周概览：主旋律一句话 + 命中家数统计（P0/P1/P2 各几家）</p>
+<p>  TOP 5 urgent：按「语言力商机规模 × 窗口紧急性」排序的前 5 家，每条含：信号 → 商机含义 → 下一步动作</p>
+<p>  P0 分组：全 9 家逐条更新（含「持续」标记维持主表信号列）</p>
+<p>  P1/P2 分组：仅列本周有新增信号的家数 + 「持续」名单</p>
+<p>  说明：数据窗口、口径、待补字段声明</p>
+<h4>3.4 工具与数据源</h4>
+<p>  WebSearch（主工具）；已连接连接器可补强：ima-mcp（知识库）、mx-ds-mcp（东方财富金融数据）、westock-mcp（腾讯自选股）、企查查/天眼查（联系人，按需）</p>
+<p>  招聘信号反查：猎聘 / BOSS 直聘 / 公司校招官网</p>
+<p>  财务数据：东方财富 / 新浪财经 / 巨潮（年报）</p>
+<p>  基建/项目：中国对外承包工程商会 / 公司公告 / 央企官网</p>
+<p>---</p>
+<h3>§4 决策人挖掘方法论（找到「能批 300 万的人」）</h3>
+<h4>4.1 核心认知（脉脉失效后的正确打法）</h4>
+<p>  脉脉不是用来「搜名字」的，是「拿到名字后加人/发消息」的工具。</p>
+<p>  大厂 CHRO / 国际化总裁姓名藏在公开来源里，不藏在脉脉里。</p>
+<h4>4.2 找人顺序（先挖名字，再上脉脉）</h4>
+<pre></pre>
+<ol><li>企查查/天眼查「主要人员」→ 法定代表人 + 董事 + 高管真名（免费）</li><li>年报/高管页（东方财富/新浪/cfi.cn）→ 全高管名单 + 简历 + 分管领域</li><li>新闻/HR 媒体（财富中文网/HRflag/晚点 LatePost）→ CHRO/国际化总裁这类职能大佬</li><li>猎聘 → 搜公司看人才库，HRD/副总裁简历可见，强于脉脉</li><li>探迹/励销云/销售易 → 付费按「公司+职位」出手机号（花钱但最快）</li><li>co-sell 伙伴（北森/Mercer/WTW/KornFerry/Moka）→ 直接引荐 CHRO，最暖、转化最高</li></ol>
+<pre></pre>
+<h4>4.3 已挖到的真名决策人（公开来源，2026-07 起）</h4>
+<table><thead><tr><th>公司</th><th>目标角色</th><th>真名</th><th>来源</th></tr></thead><tbody><tr><td>迈瑞医疗</td><td>全球营销系统负责人</td><td>李在文（高级副总经理）</td><td>cfi.cn 高管页</td></tr><tr><td>比亚迪</td><td>海外业务一号人物</td><td>李柯 / Stella Li（执行副总裁、美洲总裁、欧/中东非汽车销售总经理）</td><td>财富中文网/百度百科</td></tr><tr><td>奇瑞汽车</td><td>国际公司总经理</td><td>张贵兵（副总经理兼国际公司总经理）</td><td>新浪财经/百度百科</td></tr><tr><td>海尔智家</td><td>国际 CHRO</td><td>于文涛 博士</td><td>HRflag/法国里昂商学院</td></tr><tr><td>字节跳动</td><td>人力资源负责人</td><td>华巍 / Ronnie（总裁办负责人、HR 负责人）</td><td>百度百科/晚点 LatePost</td></tr></tbody></table>
+<blockquote>每周自动化可叠加一步：从公开来源补全各家决策人真名，长期积累到 CSV「决策人_公开姓名」列。</blockquote>
+<p>---</p>
+<h3>§5 语言力诊断方法论（进单钩子：v2 深度版 / v3 专业咨询版）</h3>
+<h4>5.1 定位</h4>
+<p>用<strong>公开可验证数据</strong>对客户做一次「出海人才语言 readiness」免费体检，作为首次触达（邮件/微信/co-sell 引荐随附）的钩子。三段价值：显专业 / 全是关于他家 / 逼他问「你咋知道这么细」。</p>
+<h4>5.2 核心原则（对标 bibliometric 报告）</h4>
+<p>  所有「计数」必须来自抽样 JD / 公开披露，宁少勿虚（抽样 15–30 个国际岗即可画出语言需求分布）</p>
+<p>  评分卡每维必须写证据，否则即泛泛而谈</p>
+<p>  数据来源逐条列 URL，让客户能反查</p>
+<h4>5.3 v3 专业咨询版结构（8 段）</h4>
+<table><thead><tr><th>段落</th><th>内容</th></tr></thead><tbody><tr><td>执行摘要</td><td>Headline KPI + 结论先行</td></tr><tr><td>方法论</td><td>总体/抽样框架（n=xx）、纳入标准、局限声明</td></tr><tr><td>标的画像</td><td>区域营收拆解表 + 全球足迹计数</td></tr><tr><td>语言需求图谱</td><td>按语种/职能/区域三维计数（核心）</td></tr><tr><td>LRI 评分卡</td><td>10 维 × 1–5，AHP 赋权，每维带证据 + 百分位</td></tr><tr><td>同业对标</td><td>2–3 家同行同维度打分</td></tr><tr><td>风险量化</td><td>把语言 gap 翻译成「钱」：情景分析（保守/基准/激进）+ ROI 视角</td></tr><tr><td>软 CTA</td><td>免费基线扫描（2 周交付）+ co-sell 钩子</td></tr></tbody></table>
+<h4>5.4 关键分析句式（穿透力）</h4>
+<p>  「高暴露—低刻度错配」：海外营收占比高但语言力无统一刻度</p>
+<p>  「X 亿增量恰来自均值 2.2–2.4 的高摩擦市场（巴西/中东/非洲法语区）」</p>
+<p>  「语言力不是 HR 成本项，是 X 亿出海营收的前置约束条件」</p>
+<h4>5.5 已完成进度</h4>
+<p>  ✅ 迈瑞医疗（深度版 + 专业咨询版 md/html）</p>
+<p>  ✅ 比亚迪 / 海尔智家（专业咨询版 md/html）</p>
+<p>  ⏳ 待做（P0 剩余 6 家）：宁德时代 / 奇瑞汽车 / 传音控股 / 字节跳动 / SHEIN希音 / 美的集团</p>
+<p>  → 交付物结构与 3 家案例速览见附录 F — 已交付诊断案例。</p>
+<p>---</p>
+<h3>§6 co-sell 桥方法论（把名字变成会）</h3>
+<h4>6.1 核心认知</h4>
+<p><strong>名字是靶心（精准锁定谁），co-sell 伙伴是桥（怎么进 CHRO 会议室）。两样凑齐才有用。</strong></p>
+<h4>6.2 伙伴分层（co-sell_partners.csv）</h4>
+<table><thead><tr><th>层级</th><th>伙伴</th><th>价值交换</th></tr></thead><tbody><tr><td>P0</td><td>北森</td><td>客户含奇瑞/长安等出海企业；AI 面试官多语言但无真英语测评 → Versant 补位</td></tr><tr><td>P0</td><td>美世 Mercer</td><td>「中企出海国际化人才解决方案」+ Mettl 测评；自办出海论坛</td></tr><tr><td>P0</td><td>德勤</td><td>China to Global 年助 2000+ 中企出海 +《中国企业全球化新纪元白皮书》</td></tr><tr><td>P1</td><td>WTW / KornFerry / 怡安</td><td>HR 咨询，常驻客户 CHRO 侧</td></tr><tr><td>P1</td><td>Moka / 肯耐珂萨</td><td>HR SaaS，可嵌入语言力模块</td></tr><tr><td>P2</td><td>出海服务商 / SI</td><td>绑定出海服务链</td></tr></tbody></table>
+<h4>6.3 30 天节奏（co-sell 冷启动）</h4>
+<table><thead><tr><th>周</th><th>动作</th></tr></thead><tbody><tr><td>W1</td><td>内部第一桥：Pearson partnerships/BD 团队 + 现有企业账户 + SMB 溢出线索</td></tr><tr><td>W2</td><td>与 2 家 HR SaaS 签 co-sell（北森/美世优先）</td></tr><tr><td>W3</td><td>用「标杆案例 + 免费诊断报告」做钩子，约 15 个 CHRO/L&D 电话</td></tr><tr><td>W4</td><td>锁定「业务老板 + CHRO」联合会议，推进首个 300 万+ 方案</td></tr></tbody></table>
+<p>---</p>
+<h3>§7 每周自动化执行清单（checklist）</h3>
+<p>  读 <code>target_accounts_50.md</code> 名单（50 家）</p>
+<p>  WebSearch 扫描 50 家（每家常规 1 搜，重点 P0 2–3 搜）</p>
+<p>  命中信号去重、判定是否为「边际新信号」（排除例行检修等非动作）</p>
+<p>  <code>update_csv_XXXX.py</code> 覆盖 CSV 信号列（备份上一期 CSV 后执行）</p>
+<p>  <code>regen_xlsx.py</code> 重新生成 xlsx</p>
+<p>  <code>出海情报库.md</code> 顶部插入当周周报区块</p>
+<p>  写 <code>.workbuddy/automations/automation-1783473323511/memory.md</code> 执行摘要</p>
+<p>  联动检查：决策人缺口 → 补挖；P0 诊断未做 → 排期；co-sell 伙伴到期 → 跟进</p>
+<p>---</p>
+<h3>§8 全部数据源清单</h3>
+<table><thead><tr><th>用途</th><th>数据源</th></tr></thead><tbody><tr><td>财务/年报</td><td>巨潮、东方财富、新浪财经、公司 IR 页</td></tr><tr><td>招聘信号</td><td>猎聘、BOSS 直聘、智联、公司校招官网</td></tr><tr><td>工商/高管</td><td>企查查、天眼查（连接器已支持按需调用）</td></tr><tr><td>新闻/行业</td><td>WebSearch、财联社、36氪、晚点 LatePost、HRflag、财富中文网</td></tr><tr><td>基建/项目</td><td>中国对外承包工程商会、央企官网、公司公告</td></tr><tr><td>金融数据</td><td>mx-ds-mcp（东方财富）、westock-mcp（腾讯自选股）</td></tr><tr><td>知识库</td><td>ima-mcp（「爱分享的财经资讯」）</td></tr></tbody></table>
+<p>---</p>
+<p><strong>维护说明：本方法论随周报执行持续校准；数据窗口、抽样口径、评分标准如有调整，需在当周周报「说明」段声明。</strong></p>
+</section>
+</main>
+<footer style="text-align:center;color:var(--muted);font-size:12.5px;padding:18px;border-top:1px solid var(--line);">培生中国区企业业务 GTM 与发展计划 · 附录 · 内部资料，仅供中国区管理层讨论使用</footer>
+</body>
+</html>

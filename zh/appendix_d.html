@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>附录 D — 竞品格局（全表） · 培生中国区企业业务 GTM</title>
+<style>
+:root{
+  --ink:#1c1828; --ink-2:#544c66; --muted:#7a7390;
+  --paper:#fbfaf8; --card:#ffffff; --line:#ece8f1; --line-2:#f3f0f7;
+  --violet:#5b2d91; --violet-deep:#37145f; --violet-2:#7a3fb0; --violet-soft:#f1eaf9;
+  --slate:#9a93a8; --slate-soft:#f3f1f6;
+  --gold:#b9801c; --gold-soft:#f7eed8;
+  --teal:#0f8a78; --rose:#bf4a40;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{margin:0;font-family:"PingFang SC","Microsoft YaHei","Hiragino Sans GB","Source Han Sans SC","Noto Sans CJK SC",sans-serif;color:var(--ink);background:var(--paper);line-height:1.78;font-size:16px;-webkit-font-smoothing:antialiased;word-break:keep-all;overflow-wrap:break-word;}
+a{color:var(--violet);text-decoration:none;}
+a:hover{text-decoration:underline;}
+
+/* Hero */
+.hero{background:linear-gradient(135deg,#ede6f7 0%,#f5f1fa 55%,#ffffff 100%);color:var(--violet-deep);padding:60px 32px 52px;position:relative;overflow:hidden;border-bottom:1px solid var(--line);}
+.hero .motif{position:absolute;right:-60px;top:-60px;width:360px;height:360px;opacity:.35;}
+.hero-inner{max-width:1180px;margin:0 auto;position:relative;z-index:1;}
+.hero .kicker{letter-spacing:.26em;text-transform:uppercase;font-size:12px;color:var(--gold);font-weight:700;}
+.hero h1{font-size:38px;line-height:1.22;margin:14px 0 10px;font-weight:800;letter-spacing:-.01em;text-wrap:balance;}
+.hero .sub{font-size:17px;opacity:1;font-weight:500;max-width:760px;color:var(--ink-2);}
+.hero .meta{margin-top:22px;display:flex;flex-wrap:wrap;gap:10px 26px;font-size:14px;opacity:1;color:var(--muted);}
+.hero .meta b{color:var(--violet);}
+
+/* Top nav */
+.topnav{position:sticky;top:0;z-index:50;background:#fff;display:flex;gap:4px;flex-wrap:wrap;padding:10px 16px;border-bottom:1px solid var(--line);box-shadow:0 2px 12px rgba(55,20,95,.06);}
+.topnav a{color:var(--ink-2);font-size:13px;padding:6px 11px;border-radius:20px;white-space:nowrap;}
+.topnav a:hover{background:var(--violet-soft);color:var(--violet-deep);text-decoration:none;}
+
+main{max-width:1180px;margin:0 auto;padding:0 24px 60px;}
+section{margin:40px 0;scroll-margin-top:64px;}
+h2{font-size:24px;color:var(--violet-deep);border-left:5px solid var(--violet);padding-left:14px;margin:34px 0 16px;font-weight:800;letter-spacing:.01em;text-wrap:balance;}
+h3{font-size:18.5px;color:var(--violet);margin:24px 0 10px;font-weight:700;text-wrap:balance;}
+h4{font-size:14.5px;color:var(--violet-2);margin:0 0 12px;letter-spacing:.02em;font-weight:700;text-wrap:balance;}
+.lead{font-size:16.5px;background:var(--violet-soft);border-radius:10px;padding:14px 18px;color:#3a2358;border-left:4px solid var(--violet);text-wrap:pretty;}
+p,li,td,blockquote{text-wrap:pretty;}
+.muted{color:var(--muted);font-size:14.5px;}
+.muted-light{color:var(--muted);}
+
+/* KPI */
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:8px 0 6px;}
+.kpi{background:var(--card);border:1px solid var(--line);border-top:3px solid var(--violet);border-radius:0 0 12px 12px;padding:18px 16px;box-shadow:0 4px 14px rgba(55,20,95,.05);}
+.kpi-num{font-size:29px;font-weight:800;color:var(--violet);line-height:1.1;letter-spacing:-.01em;}
+.kpi.gold{border-top-color:var(--gold);background:linear-gradient(180deg,#fdf8ef,#fff);}
+.kpi.gold .kpi-num{color:var(--gold);}
+.kpi-lab{font-size:13px;color:var(--muted);margin-top:7px;line-height:1.5;}
+@media(max-width:760px){.kpis{grid-template-columns:repeat(2,1fr);}.kpi-num{font-size:23px;}}
+
+/* TL;DR */
+.tldr{background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden;margin:14px 0;}
+.tldr-row{display:flex;gap:14px;padding:12px 16px;border-bottom:1px solid var(--line-2);}
+.tldr-row:last-child{border-bottom:none;}
+.t-lab{flex:0 0 64px;font-weight:800;color:var(--violet);font-size:14px;}
+.callout{background:var(--gold-soft);border-left:4px solid var(--gold);color:#5a3d05;font-weight:700;padding:14px 18px;border-radius:0 10px 10px 0;margin-top:14px;font-size:15px;}
+.quotes{display:flex;gap:16px;flex-wrap:wrap;margin-top:16px;}
+blockquote{margin:0;background:#fff;border-left:4px solid var(--violet-soft);padding:12px 16px;border-radius:0 8px 8px 0;color:#4a3a63;font-style:normal;flex:1;min-width:240px;}
+
+/* Panels */
+.panel{background:#fff;border:1px solid var(--line);border-radius:14px;padding:20px 22px;margin:16px 0;box-shadow:0 3px 12px rgba(55,20,95,.05);}
+.panel.dark{background:linear-gradient(135deg,#f8f6fc,#f1eaf9);color:var(--ink);border:1px solid #e2d9ed;}
+.panel.dark h3{color:var(--violet-deep);}
+.pillars{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px;}
+.pillar{flex:1;min-width:150px;background:var(--violet-soft);border-radius:10px;padding:12px;text-align:center;font-size:13.5px;color:#4a3a63;}
+.pillar.core{background:var(--violet);color:#fff;font-weight:700;}
+.pillar.hot{background:var(--gold);color:#3a2700;font-weight:700;}
+
+/* Charts */
+.chart-wrap{margin:16px 0;}
+.chart-card{background:#fcfbff;border:1px solid var(--line);border-radius:12px;padding:18px;}
+.svg-journey{width:100%;max-width:760px;display:block;margin:0 auto;}
+.jn-num{fill:#fff;font-size:18px;font-weight:800;}
+.jn-stage{fill:var(--violet-deep);font-size:14px;font-weight:700;}
+.jn-prod{fill:var(--ink-2);font-size:11px;}
+.jn-loop{fill:var(--violet-deep);font-size:12.5px;font-weight:700;}
+.jn-gse{fill:var(--muted);font-size:11px;}
+.ax-lab{fill:var(--muted);font-size:12px;}
+.quad-win{fill:var(--violet);font-size:11px;font-weight:700;opacity:.7;}
+.m-lab{fill:#6a6378;font-size:11px;}
+.m-lab-big{fill:var(--violet);font-size:12.5px;font-weight:800;}
+.arr-val{fill:var(--violet-deep);font-size:14px;font-weight:800;}
+.arr-lab{fill:var(--muted);font-size:11px;}
+.arr-tgt{font-size:10.5px;font-weight:700;}
+.pr-num{font-size:15px;font-weight:800;}
+.pr-lab{font-size:12px;font-weight:700;}
+.pr-note{fill:var(--muted);font-size:11.5px;}
+.ind-lab{fill:#4a3a63;font-size:12.5px;}
+.ind-val{fill:var(--violet);font-size:12.5px;font-weight:700;}
+.charts2{display:grid;grid-template-columns:1.3fr 1fr;gap:16px;}
+@media(max-width:760px){.charts2{grid-template-columns:1fr;}}
+.market-stats{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:10px;}
+.ms{flex:1;min-width:140px;background:var(--card);border:1px solid var(--line);border-bottom:3px solid var(--violet);border-radius:10px;padding:14px;text-align:center;}
+.ms-num{font-size:25px;font-weight:800;color:var(--violet);}
+.ms-lab{font-size:12.5px;color:var(--muted);margin-top:4px;}
+
+/* Tables */
+table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14.5px;background:#fff;border-radius:10px;overflow:hidden;}
+th{background:var(--violet);color:#fff;text-align:left;padding:10px 12px;font-weight:700;font-size:13.5px;}
+td{padding:9px 12px;border-bottom:1px solid var(--line-2);vertical-align:top;}
+tbody tr:nth-child(even){background:#faf8fe;}
+tbody tr:hover{background:var(--violet-soft);}
+code{background:var(--violet-soft);padding:1px 6px;border-radius:5px;font-size:13px;color:var(--violet-deep);}
+
+/* Flow */
+.flow{display:flex;align-items:center;flex-wrap:wrap;gap:6px;margin:12px 0;}
+.flow-step{background:var(--violet);color:#fff;border-radius:10px;padding:10px 12px;font-size:13.5px;font-weight:700;text-align:center;flex:1;min-width:120px;}
+.flow-step span{display:block;font-size:11px;font-weight:400;opacity:.85;margin-top:3px;}
+.flow-arrow{color:var(--violet-2);font-weight:800;}
+
+/* Cards */
+.cards3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:12px 0;}
+.cards2{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin:12px 0;}
+@media(max-width:760px){.cards3,.cards2{grid-template-columns:1fr;}}
+.scard{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px;box-shadow:0 3px 10px rgba(55,20,95,.05);}
+.scard p{font-size:14px;color:var(--muted);margin:8px 0 0;}
+.scard-tag{display:inline-block;font-size:11px;font-weight:700;padding:3px 9px;border-radius:20px;margin-bottom:8px;}
+.scard-tag.p0{background:var(--gold);color:#fff;}.scard-tag.p1{background:var(--violet-soft);color:var(--violet-deep);}.scard-tag.p2{background:var(--slate-soft);color:#5a5468;}
+.delivered{display:flex;flex-wrap:wrap;gap:10px;margin:10px 0;font-size:13.5px;}
+.ok{background:#e8f6ef;color:#15724a;padding:6px 12px;border-radius:8px;}
+.wait{background:var(--gold-soft);color:#7a5200;padding:6px 12px;border-radius:8px;}
+.lcard{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px;box-shadow:0 3px 10px rgba(55,20,95,.05);}
+.lcard p{font-size:14px;color:#3a2a52;margin:6px 0 0;}
+
+/* P0 grid */
+.p0grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:12px 0;}
+@media(max-width:760px){.p0grid{grid-template-columns:1fr;}}
+.p0card{background:#fff;border:1px solid var(--line);border-top:4px solid var(--gold);border-radius:10px;padding:14px;box-shadow:0 3px 10px rgba(55,20,95,.05);}
+.p0name{font-weight:800;color:var(--violet-deep);font-size:16px;}
+.p0pain{font-size:13px;color:#7a3b00;background:var(--gold-soft);padding:5px 8px;border-radius:6px;margin:6px 0;}
+.p0entry{font-size:13px;color:var(--muted);}
+.p0who{font-size:12.5px;color:var(--violet);margin-top:6px;}
+
+/* Buyers / timeline */
+.buyers{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:12px 0;}
+@media(max-width:760px){.buyers{grid-template-columns:1fr;}}
+.buyer{background:var(--violet-soft);border-radius:10px;padding:12px;font-size:14px;}
+.timeline{position:relative;margin:18px 0;padding-left:8px;}
+.tl-item{display:flex;gap:16px;padding:14px 0;border-left:3px solid var(--violet-soft);padding-left:18px;position:relative;}
+.tl-item::before{content:"";position:absolute;left:-9px;top:18px;width:14px;height:14px;border-radius:50%;background:var(--violet);}
+.tl-phase{flex:0 0 130px;font-weight:800;color:var(--violet);}
+.tl-body{font-size:14.5px;}
+.asks li{margin:8px 0;}
+
+/* Appendix */
+.appendix{background:#fcfbff;border:1px solid var(--line);border-radius:14px;padding:20px 22px;margin:30px 0;}
+.appendix h2{color:var(--violet);}
+.doc-body h3{color:var(--violet-deep);border-left:4px solid var(--violet);padding-left:10px;margin:22px 0 10px;font-size:18px;}
+.doc-body h4{color:var(--violet);margin:18px 0 8px;font-size:15.5px;}
+.doc-body h5{color:var(--violet-2);margin:14px 0 6px;font-size:14px;}
+.doc-body blockquote{background:var(--violet-soft);border:1px solid var(--line);border-left:4px solid var(--violet);border-radius:0 10px 10px 0;padding:12px 16px;margin:12px 0;color:#4a3a63;font-size:14px;}
+.doc-body p{font-size:14.5px;margin:10px 0;}
+.doc-body li{margin:6px 0;font-size:14.5px;line-height:1.7;}
+.doc-body hr{border:none;border-top:1px solid var(--line);margin:20px 0;}
+.doc-body table th,.doc-body table td{white-space:normal;word-break:keep-all;}
+.doc-body table th{min-width:90px;}
+
+/* Appendix index cards (main doc) */
+.appx-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:14px 0;}
+.appx-card{display:flex;flex-direction:column;gap:6px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 16px;text-decoration:none;color:inherit;transition:box-shadow .15s,transform .15s;box-shadow:0 2px 8px rgba(55,20,95,.04);}
+.appx-card:hover{box-shadow:0 6px 18px rgba(55,20,95,.12);transform:translateY(-2px);text-decoration:none;}
+.appx-tag{font-size:11px;font-weight:800;letter-spacing:.08em;color:#fff;background:var(--violet);display:inline-block;width:fit-content;padding:2px 9px;border-radius:999px;}
+.appx-title{font-size:15px;font-weight:800;color:var(--violet-deep);}
+.appx-desc{font-size:12.5px;color:var(--muted);line-height:1.6;}
+.appx-open{font-size:12.5px;font-weight:700;color:var(--violet);}
+@media(max-width:760px){.appx-grid{grid-template-columns:1fr;}}
+/* Standalone appendix page */
+body.appx{background:var(--paper);}
+.appx-hero{background:linear-gradient(135deg,#ede6f7 0%,#f5f1fa 55%,#ffffff 100%);color:var(--violet-deep);padding:34px 32px 30px;border-bottom:1px solid var(--line);}
+.appx-hero .kicker{color:var(--violet-2);font-size:12px;font-weight:700;letter-spacing:.12em;}
+.appx-hero h1{margin:8px 0 0;font-size:26px;line-height:1.35;}
+.appx-back{display:inline-block;margin-bottom:14px;font-size:13.5px;font-weight:700;color:var(--violet);background:#fff;border:1px solid var(--line);border-radius:999px;padding:6px 14px;text-decoration:none;}
+.appx-back:hover{background:var(--violet-soft);text-decoration:none;}
+body.appx main{max-width:960px;margin:0 auto;padding:26px 24px 60px;}
+body.appx .appendix{margin:0 0 26px;}
+
+.ammo{margin:0;padding-left:18px;}
+.ammo li{margin:7px 0;font-size:14.5px;}
+.src{font-size:14px;padding-left:18px;}
+.src li{margin:7px 0;}
+footer{text-align:center;color:var(--muted);font-size:13px;padding:30px;border-top:1px solid var(--line);}
+
+@media print{
+  body{background:#fff;}
+  .topnav{display:none;}
+  .hero{background:#f5f1fa !important;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+  .panel,.kpi,section{break-inside:avoid;}
+  *{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+}
+</style>
+</head>
+<body class="appx">
+<header class="appx-hero">
+<a class="appx-back" href="index.html">← 返回主报告</a>
+<div class="kicker">Pearson · Enterprise Skilling · China · 附录</div>
+<h1>附录 D — 竞品格局（全表）</h1>
+</header>
+<main>
+
+<section id="appd" class="appendix">
+  <h2>附录 D — 竞品格局（全表）</h2>
+  <table>
+    <thead><tr><th>对比</th><th>他们在旅程里卡在哪</th><th>我们的优势</th></tr></thead>
+    <tbody>
+      <tr><td><b>北森 Beisen / Moka</b>（HR SaaS）</td><td>英语只是 7 个测评维度之一；无 GSE 基准；无培训闭环</td><td>我们占完整旅程</td></tr>
+      <tr><td><b>英孚 EF</b>（教育优先）</td><td>课程无岗位靶向测评；无招聘侧测评</td><td>测评+学习+验证一体</td></tr>
+      <tr><td><b>托业 TOEIC</b>（点考）</td><td>只考不练，口语弱，无岗位映射</td><td>全闭环 + 口语优先 + 岗位画像</td></tr>
+      <tr><td><b>剑桥领思 Linguaskill</b></td><td>AI-CEFR 测评；强在「诊断/验证」，无 GSE 岗位映射、无学习闭环</td><td>全闭环 + GSE 岗位画像（1400 岗）+ 分钟级出分</td></tr>
+    </tbody>
+  </table>
+</section>
+</main>
+<footer style="text-align:center;color:var(--muted);font-size:12.5px;padding:18px;border-top:1px solid var(--line);">培生中国区企业业务 GTM 与发展计划 · 附录 · 内部资料，仅供中国区管理层讨论使用</footer>
+</body>
+</html>
