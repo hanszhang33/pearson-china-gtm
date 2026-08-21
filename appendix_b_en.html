@@ -36,7 +36,7 @@ a:hover{text-decoration:underline;}
 
 main{max-width:1180px;margin:0 auto;padding:0 24px 60px;}
 section{margin:40px 0;scroll-margin-top:64px;}
-h2{font-size:24px;color:var(--violet-deep);border-left:5px solid var(--violet);padding-left:14px;margin:34px 0 16px;font-weight:800;letter-spacing:.01em;text-wrap:balance;scroll-margin-top:70px;}
+h2{font-size:24px;color:var(--violet-deep);border-left:5px solid var(--violet);padding-left:14px;margin:34px 0 16px;font-weight:800;letter-spacing:.01em;text-wrap:balance;}
 h3{font-size:18.5px;color:var(--violet);margin:24px 0 10px;font-weight:700;text-wrap:balance;}
 h4{font-size:14.5px;color:var(--violet-2);margin:0 0 12px;letter-spacing:.02em;font-weight:700;text-wrap:balance;}
 .lead{font-size:16.5px;background:var(--violet-soft);border-radius:10px;padding:14px 18px;color:#3a2358;border-left:4px solid var(--violet);text-wrap:pretty;}
@@ -82,7 +82,7 @@ td{padding:9px 12px;border-bottom:1px solid var(--line-2);vertical-align:top;}
 tbody tr:nth-child(even){background:#faf8fe;}
 tbody tr:hover{background:var(--violet-soft);}
 code{background:var(--violet-soft);padding:1px 6px;border-radius:5px;font-size:13px;color:var(--violet-deep);}
-pre{background:#221733;color:#e9e2f5;padding:16px 18px;border-radius:10px;overflow-x:auto;}
+pre{background:#221733;color:#e9e2f5;padding:16px 18px;border-radius:10px;overflow-x:auto;font-size:13.5px;line-height:1.7;}
 pre code{background:none;color:inherit;padding:0;}
 
 /* Flow */
@@ -109,6 +109,7 @@ body.appx{background:var(--paper);}
 .appx-back:hover{background:var(--violet-soft);text-decoration:none;}
 body.appx main{max-width:960px;margin:0 auto;padding:26px 24px 60px;}
 body.appx .appendix{margin:0 0 26px;}
+hr{border:none;border-top:1px solid var(--line);margin:22px 0;}
 
 footer{text-align:center;color:var(--muted);font-size:13px;padding:30px;border-top:1px solid var(--line);}
 
@@ -128,29 +129,96 @@ footer{text-align:center;color:var(--muted);font-size:13px;padding:30px;border-t
 <div class="kicker">Pearson · China Enterprise GTM · Appendix B</div>
 <h1>Appendix B — Outbound-intel screening methodology (50-account system)</h1>
 </header>
-<main><div class="appendix">
-<p><strong>Purpose:</strong> the complete, repeatable screening-and-operations system behind the 50-account engine (Versant assessment + Mondly training, ¥3m+ deals). It consolidates five prior files into one executable framework. Companion data: <code>outbound-intel.csv</code> (master, 14 cols × 50 rows) / <code>outbound-intel.xlsx</code> (visual filter) / <code>outbound-intel-log.md</code> (weekly archive).</p>
-<p><strong>Core assumption:</strong> <em>outbound = language-capability need = Pearson entry point</em>. Every filter runs on three hard metrics: overseas-revenue share / overseas-volume target / large-scale overseas hiring with an English bar.</p>
-<h3 id="1-screening-logic-how-the-50-were-chosen">§1 Screening logic (how the 50 were chosen)</h3>
-<p><strong>Entry conditions</strong> (any one qualifies):</p>
-<p>1. High overseas-revenue share (≥40%, or absolute ≥¥10bn)</p>
-<p>2. Top-tier overseas volume/exports (e.g. top-10 vehicle exports, tier-1 module shipments)</p>
-<p>3. Large-scale overseas employment: overseas plants / subsidiaries / project teams hiring English-as-working-language</p>
-<p>4. Active overseas M&amp;A / plant-build / JV (cross-cultural integration need)</p>
-<p>5. Overseas digital 0→1 (cross-border e-com, overseas warehouse, overseas App)</p>
-<p><strong>Industry pool (distribution of 50):</strong> Medical/Pharma/CXO 10 · New-energy/Auto/Battery 9 · Automotive 7 · Consumer-electronics/Internet/E-com 11 · Construction machinery 4 · Home appliances 4 · Infrastructure 4 · Chemicals 1.</p>
-<p><strong>Exclusion:</strong> no real outbound business/plan; sub-scale workforce.</p>
-<h3 id="2-priority-tiers-p0-p1-p2">§2 Priority tiers (P0 / P1 / P2)</h3>
-<table><thead><tr><th>Tier</th><th>Count</th><th>Bar</th><th>Follow-up</th></tr></thead><tbody><tr><td><strong>P0</strong></td><td>9</td><td>All three hard metrics + active plant-build / M&amp;A / digital-0→1 window</td><td>Diagnostics first, decision-makers first, co-sell first</td></tr><tr><td><strong>P1</strong></td><td>34</td><td>Two metrics hit, high certainty, no forcing window</td><td>Routine monitoring + event-triggered upgrade</td></tr><tr><td><strong>P2</strong></td><td>7</td><td>One metric or still in build-up phase</td><td>Monitor; event-triggered upgrade</td></tr></tbody></table>
-<p>Tiers are dynamic — e.g. the four infrastructure majors (P2) were flagged "effective signal" two weeks running and can be lifted to P1.</p>
-<h3 id="3-weekly-signal-monitoring-monday-automation">§3 Weekly signal monitoring (Monday automation)</h3>
-<p>Four signal types: ① new outbound move / overseas-revenue disclosure · ② executive or HR-lead change · ③ large-scale overseas-role hiring · ④ overseas project / bid / order. Process: read the 50-list → WebSearch each (company + "overseas/international" + last-week keywords) → record signal/implication/next-step → update csv + xlsx + weekly log. ~30 WebSearches per Monday.</p>
-<h3 id="4-decision-maker-mining-find-the-person-who-approves-3m">§4 Decision-maker mining (find the person who approves ¥3m)</h3>
-<p>Maimai is for <em>contacting</em> names, not <em>finding</em> them. Real names live in public sources: ① Qichacha/Tianyancha "key personnel" · ② annual-report/exe pages (Eastmoney/Sina) · ③ HR media (HRflag/LatePost) · ④ Liepin talent pools · ⑤ paid signals (Tanji/Liaoxiao/Yixia) · ⑥ co-sell partners (Beisen/Mercer/WTW/KornFerry/Moka) for warm CHRO intros. Already-identified named decision-makers (public, from 2026-07): Mindray (Li Zaiwen, SVP Global Marketing), BYD (Stella Li), Chery (Zhang Guibing, GM International), Haier (Dr Yu Wentao, Int'l CHRO), ByteDance (Hua Wei/Ronnie, HR lead).</p>
-<h3 id="5-language-readiness-diagnostics-the-hook-v2-depth-v3-consulting">§5 Language-readiness diagnostics (the hook: v2 depth / v3 consulting)</h3>
-<p>A free "outbound talent language-readiness" health-check built from public, verifiable data — used as the first-touch hook. Principles: every count from sampled JDs/public disclosures (sample 15–30 int'l roles); every scorecard dimension cites evidence; every source lists a URL. v3 structure (8 parts): Exec summary · Methodology · Target portrait · Language-need map · LRI scorecard (10 dims × 1–5, AHP-weighted) · Peer benchmark · Risk quantification (gap→money, scenario + ROI) · Soft CTA. Completed: Mindray (v2+v3), BYD/Haier (v3); pending P0: CATL/Chery/Transsion/ByteDance/SHEIN/Midea.</p>
-<h3 id="6-co-sell-bridge-turn-a-name-into-a-meeting">§6 co-sell bridge (turn a name into a meeting)</h3>
-<p>Names are the bullseye (who); co-sell partners are the bridge (how to enter the CHRO room). Partner tiers: <strong>P0</strong> Beisen (clients incl. Chery/Changan; AI interviewer lacks real English test → Versant fills), Mercer (China-to-Global talent + Mettl), Deloitte (China to Global, 2000+ firms/yr). <strong>P1</strong> WTW/KornFerry/Aon, Moka/KNX. <strong>P2</strong> outbound service/SI. 30-day cold-start: W1 internal bridge (BD + existing accounts) · W2 sign 2 co-sell (Beisen/Mercer) · W3 hook with benchmark case + free diagnostic, 15 CHRO/L&amp;D calls · W4 lock "business owner + CHRO" joint meeting for first ¥3m+ deal.</p>
-</div></main>
+<main>
+<section id="appb" class="appendix">
+  <h2>Appendix B — Outbound-intel screening methodology (50-account system)</h2>
+  <blockquote>Purpose: the complete, repeatable screening-and-operations system behind the Pearson enterprise key-account engine (¥3m+ deals, Versant assessment + Mondly training) — target-account bullseye screening and continuous intel monitoring. This document consolidates the rules formerly scattered across five files (playbook / target list / decision-maker SOP / diagnostic template / co-sell handbook) into one executable, replicable screening-and-operations framework. Companion data: <code>outbound-intel.csv</code> (master, 14 cols × 50 rows) / <code>outbound-intel.xlsx</code> (visual filter) / <code>outbound-intel-log.md</code> (weekly archive).</blockquote>
+
+  <h3>§0 Methodology overview (the five-step loop)</h3>
+  <pre>① Target-pool screening → ② Priority tiering → ③ Weekly signal monitoring → ④ Decision-maker mining → ⑤ Benchmark diagnostic + co-sell bridge
+        (one-off)              (one-off)             (every-Monday automation)        (continuous build-up)          (triggered on demand, pre-deal)</pre>
+  <p>Core assumption: <strong>enterprise outbound = language-capability need = Pearson entry point</strong>. Every filter runs on three hard metrics: overseas-revenue share / overseas-volume target / large-scale overseas hiring with an English bar.</p>
+  <hr>
+
+  <h3>§1 Target-pool screening logic (how the 50 were chosen)</h3>
+  <h4>1.1 Entry conditions (any one qualifies)</h4>
+  <table><thead><tr><th>#</th><th>Hard condition</th><th>Judgment data source</th></tr></thead><tbody><tr><td>1</td><td>High overseas-revenue share (≥40%, or absolute ≥¥10bn)</td><td>Annual / interim report</td></tr><tr><td>2</td><td>Top-tier overseas volume / exports (top-10 vehicle exports, tier-1 module shipments)</td><td>CAAM / industry association / company announcements</td></tr><tr><td>3</td><td>Large-scale overseas employment: overseas plants / subsidiaries / project teams hiring English-as-working-language</td><td>Recruiting platforms (Liepin / BOSS / campus sites)</td></tr><tr><td>4</td><td>Active overseas M&amp;A / plant-build / JV (cross-cultural integration need)</td><td>News / announcements</td></tr><tr><td>5</td><td>Overseas digital 0→1 (cross-border e-com, overseas warehouse, digital bank, overseas App)</td><td>News / industry media</td></tr></tbody></table>
+  <h4>1.2 Industry-pool structure (distribution of 50)</h4>
+  <table><thead><tr><th>Industry</th><th>Count</th><th>Representatives</th></tr></thead><tbody><tr><td>Medical devices / Pharma / CXO</td><td>10</td><td>Mindray, United Imaging, WuXi AppTec, Hengrui, BeiGene, Fosun, Intco, Yuwell, MicroPort, Wantai</td></tr><tr><td>New-energy / Auto / Battery</td><td>9</td><td>BYD, CATL, LONGi, Jinko, Trina, Sungrow, Canadian Solar, Envision, Chery</td></tr><tr><td>Automotive</td><td>7</td><td>SAIC, Geely, Great Wall, Changan, NIO, Fuyao, Sany (machinery, counted under auto)</td></tr><tr><td>Consumer-electronics / Internet / E-com</td><td>11</td><td>Huawei, Xiaomi, Transsion, OPPO, Anker, ByteDance, Tencent, miHoYo, SHEIN, Temu, Alibaba International, Kuaishou</td></tr><tr><td>Construction machinery</td><td>4</td><td>Sany, Zoomlion, XCMG, LiuGong</td></tr><tr><td>Home appliances</td><td>4</td><td>Haier, Midea, Hisense, Gree</td></tr><tr><td>Infrastructure</td><td>4</td><td>CCCC, CSCEC, CREC, PowerChina</td></tr><tr><td>Chemicals</td><td>1</td><td>Wanhua</td></tr></tbody></table>
+  <h4>1.3 Exclusion criteria</h4>
+  <p>No real outbound business / plan; sub-scale workforce.</p>
+  <hr>
+
+  <h3>§2 Priority tiers (P0 / P1 / P2)</h3>
+  <table><thead><tr><th>Tier</th><th>Count</th><th>Bar</th><th>Color (xlsx)</th><th>Follow-up</th></tr></thead><tbody><tr><td><strong>P0</strong></td><td>9</td><td>All three hard metrics (high overseas-revenue share + large overseas footprint + large English-bar workforce) AND in a plant-build / M&amp;A / digital-0→1 window</td><td>Orange</td><td>Heavy investment: diagnostics first, decision-makers first, co-sell first</td></tr><tr><td><strong>P1</strong></td><td>34</td><td>Two metrics hit, high certainty, no forcing window</td><td>Yellow</td><td>Routine monitoring + event-triggered upgrade</td></tr><tr><td><strong>P2</strong></td><td>7</td><td>One metric or still in build-up</td><td>Green</td><td>Monitor; event-triggered upgrade</td></tr></tbody></table>
+  <blockquote>Tiers are dynamic — e.g. the four infrastructure majors (P2) were flagged "effective signal" two weeks running (7/20 and 8/17 weekly logs) and can be lifted to P1 if it continues.</blockquote>
+  <hr>
+
+  <h3>§3 Weekly signal monitoring framework (Monday automation)</h3>
+  <h4>3.1 Four signal types monitored</h4>
+  <table><thead><tr><th>Signal type</th><th>Example</th><th>Language-need implication</th></tr></thead><tbody><tr><td>① New outbound move / overseas-revenue disclosure</td><td>Plant-build, M&amp;A, overseas-HQ relocation, export record</td><td>English-need during build / integration</td></tr><tr><td>② Exec or HR-lead change</td><td>New CEO, new CHRO, overseas-business head reshuffle</td><td>New-leader window; decision chain refresh</td></tr><tr><td>③ Large-scale overseas-role hiring</td><td>Liepin / BOSS / campus int'l roles</td><td>Hiring bar = assessment + training entry</td></tr><tr><td>④ Overseas project / bid / order</td><td>EPC mega-deal, overseas warehouse, storage order</td><td>Sino-foreign project-team English</td></tr></tbody></table>
+  <h4>3.2 Execution flow (run every Monday, ~30 WebSearches)</h4>
+  <ol><li>Read the 50-list in <code>target_accounts_50.md</code></li><li>WebSearch each: company + "overseas / international" + last-week keywords (plant-build / hiring / export / signing)</li><li>Hit → record: company / signal date / signal content / opportunity meaning / next step</li><li>Write the three-piece set:</li></ol>
+  <ul><li><code>outbound-intel.csv</code> — update signal column (no duplicate rows; keep 14 cols × 50 rows)</li><li><code>outbound-intel.xlsx</code> — <code>regen_xlsx.py</code> regenerates (P0 orange / P1 yellow / P2 green, freeze top row, auto-filter)</li><li><code>outbound-intel-log.md</code> — insert "### YYYY-MM-DD weekly" block at top (TOP5 urgent + P0 / P1 / P2 groups)</li></ul>
+  <ol><li>Write automation <code>memory.md</code> (execution summary)</li></ol>
+  <h4>3.3 Weekly-log structure (archive format)</h4>
+  <p>This week overview: one-line theme + hit-count stats (how many P0 / P1 / P2)</p>
+  <p>TOP 5 urgent: top 5 by "language-need scale × window urgency", each with signal → meaning → next step</p>
+  <p>P0 group: all 9 updated line by line (with "ongoing" markers maintaining master signal column)</p>
+  <p>P1 / P2 group: only those with new signals this week + "ongoing" list</p>
+  <p>Notes: data window, caliber, pending-field disclosures</p>
+  <h4>3.4 Tools &amp; data sources</h4>
+  <p>WebSearch (primary); connected connectors can augment: ima-mcp (knowledge base), mx-ds-mcp (Eastmoney financial data), westock-mcp (Tencent self-selected stocks), Qichacha / Tianyancha (contacts, on demand)</p>
+  <p>Recruiting-signal reverse lookup: Liepin / BOSS Zhipin / company campus sites</p>
+  <p>Financial data: Eastmoney / Sina Finance / CNINFO (annual reports)</p>
+  <p>Infrastructure / projects: China International Contractors Association / company announcements / SOE sites</p>
+  <hr>
+
+  <h3>§4 Decision-maker mining methodology (find the person who approves ¥3m)</h3>
+  <h4>4.1 Core insight (the post-Maimai playbook)</h4>
+  <p>Maimai isn't for "finding names" — it's for "adding / DMing once you already have the name."</p>
+  <p>Big-company CHRO / international-president names live in public sources, not inside Maimai.</p>
+  <h4>4.2 Find-order (mine names first, then go to Maimai)</h4>
+  <ol><li>Qichacha / Tianyancha "key personnel" → legal rep + directors + execs' real names (free)</li><li>Annual-report / exec pages (Eastmoney / Sina / cfi.cn) → full exec list + bios + domains</li><li>News / HR media (Fortune China / HRflag / LatePost) → CHRO / international-president types</li><li>Liepin → search company talent pool; HRD / VP resumes visible, stronger than Maimai</li><li>Tanji / Liaoxiao / SalesEase → paid, "company + title" → mobile number (costs but fastest)</li><li>co-sell partners (Beisen / Mercer / WTW / KornFerry / Moka) → direct CHRO intros, warmest, highest conversion</li></ol>
+  <h4>4.3 Named decision-makers already mined (public sources, from 2026-07)</h4>
+  <table><thead><tr><th>Company</th><th>Target role</th><th>Real name</th><th>Source</th></tr></thead><tbody><tr><td>Mindray</td><td>Global marketing system lead</td><td>Li Zaiwen (SVP)</td><td>cfi.cn exec page</td></tr><tr><td>BYD</td><td>Overseas business No.1</td><td>Stella Li (EVP; President of Americas; GM of Europe / Middle-East-Africa auto sales)</td><td>Fortune China / Baidu Baike</td></tr><tr><td>Chery</td><td>Int'l company GM</td><td>Zhang Guibing (VP &amp; Int'l GM)</td><td>Sina Finance / Baidu Baike</td></tr><tr><td>Haier</td><td>Int'l CHRO</td><td>Dr Yu Wentao</td><td>HRflag / emlyon</td></tr><tr><td>ByteDance</td><td>HR lead</td><td>Hua Wei / Ronnie (Office of President head, HR lead)</td><td>Baidu Baike / LatePost</td></tr></tbody></table>
+  <blockquote>Weekly automation can add a step: from public sources, fill in each account's real decision-maker name, accumulating long-term into the CSV "decision_maker_public_name" column.</blockquote>
+  <hr>
+
+  <h3>§5 Benchmark-report methodology (the hook: free benchmark scan)</h3>
+  <h4>5.1 Positioning</h4>
+  <p>A free "outbound talent language readiness" health-check built from public, verifiable data, used as the first-touch hook (email / WeChat / co-sell intro attachment). Three values: shows expertise / all about them / makes them ask "how do you know so precisely."</p>
+  <p class="muted">Note: the legacy "v2 depth / v3 consulting" language-readiness diagnostic templates are retired; the benchmark report is now the single deliverable.</p>
+  <h4>5.2 Core principles (bibliometric benchmark report)</h4>
+  <p>Every count must come from sampled JDs / public disclosures — fewer-but-real (sample 15–30 int'l roles to map the language-need distribution)</p>
+  <p>Every scorecard dimension must cite evidence, else it's generic talk</p>
+  <p>Every data source lists a URL so the client can reverse-check</p>
+  <p>The benchmark must include a peer dimension, else it's just self-talk</p>
+  <h4>5.3 Benchmark-report structure (8 parts)</h4>
+  <table><thead><tr><th>Part</th><th>Content</th></tr></thead><tbody><tr><td>Exec summary</td><td>Headline KPI + conclusion-first</td></tr><tr><td>Methodology</td><td>Population / sampling framework (n=xx), inclusion criteria, limitation disclaimer</td></tr><tr><td>Target portrait</td><td>Regional revenue breakdown table + global-footprint count</td></tr><tr><td>Language-need map</td><td>Counts by language / function / region (core)</td></tr><tr><td>LRI scorecard</td><td>10 dims × 1–5, AHP-weighted, each with evidence + percentile</td></tr><tr><td>Peer benchmark</td><td>2–3 peers scored on the same dimensions</td></tr><tr><td>Risk quantification</td><td>Translate language gap into money: scenario analysis (conservative / base / aggressive) + ROI view</td></tr><tr><td>Soft CTA</td><td>Free baseline scan (2-week delivery) + co-sell hook</td></tr></tbody></table>
+  <h4>5.4 Key analytical sentences (penetrating)</h4>
+  <p>"High-exposure / low-calibration mismatch": high overseas-revenue share but no unified language calibration</p>
+  <p>"¥X bn increment comes precisely from high-friction markets averaging 2.2–2.4 (Brazil / Middle East / French-speaking Africa)"</p>
+  <p>"Language capability isn't an HR cost line — it's the front constraint on ¥X bn of outbound revenue"</p>
+  <h4>5.5 Completed progress</h4>
+  <p>✅ Mindray (benchmark report md / html)</p>
+  <p>✅ BYD / Haier (benchmark report md / html)</p>
+  <p>⏳ Pending (remaining 6 P0): CATL / Chery / Transsion / ByteDance / SHEIN / Midea</p>
+  <p>→ Deliverable structure &amp; 3-case snapshot in Appendix F — delivered benchmark cases.</p>
+  <hr>
+
+  <h3>§6 co-sell bridge methodology (turn a name into a meeting)</h3>
+  <h4>6.1 Core insight</h4>
+  <p><strong>Names are the bullseye (who precisely); co-sell partners are the bridge (how to enter the CHRO room). Both together are what work.</strong></p>
+  <h4>6.2 Partner tiers (co-sell_partners.csv)</h4>
+  <table><thead><tr><th>Tier</th><th>Partner</th><th>Value exchange</th></tr></thead><tbody><tr><td>P0</td><td>Beisen</td><td>Clients incl. Chery / Changan etc. outbound firms; AI interviewer multilingual but no real English test → Versant fills</td></tr><tr><td>P0</td><td>Mercer</td><td>"Chinese enterprises going global" int'l talent solution + Mettl assessment; runs its own outbound forum</td></tr><tr><td>P0</td><td>Deloitte</td><td>China to Global, helps 2000+ Chinese firms go global / yr + "China Going Global New Era" whitepaper</td></tr><tr><td>P1</td><td>WTW / KornFerry / Aon</td><td>HR consulting, sits on client CHRO side</td></tr><tr><td>P1</td><td>Moka / KNX</td><td>HR SaaS, can embed a language module</td></tr><tr><td>P2</td><td>Outbound service providers / SI</td><td>Bound to the outbound service chain</td></tr></tbody></table>
+  <h4>6.3 30-day cadence (co-sell cold-start)</h4>
+  <table><thead><tr><th>Week</th><th>Action</th></tr></thead><tbody><tr><td>W1</td><td>Internal first bridge: Pearson partnerships / BD team + existing enterprise accounts + SMB spillover leads</td></tr><tr><td>W2</td><td>Sign 2 HR-SaaS co-sells (Beisen / Mercer first)</td></tr><tr><td>W3</td><td>Use "benchmark case + free diagnostic report" as hook, ~15 CHRO / L&amp;D calls</td></tr><tr><td>W4</td><td>Lock "business owner + CHRO" joint meeting, advance first ¥3m+ deal</td></tr></tbody></table>
+  <hr>
+
+  <p><strong>Maintenance note: this methodology is continuously calibrated with weekly-log execution; if the data window, sampling caliber, or scoring standard changes, it must be declared in that week's log "Notes" section.</strong></p>
+</section>
+</main>
+<footer style="text-align:center;color:var(--muted);font-size:12.5px;padding:18px;border-top:1px solid var(--line);">Pearson China Enterprise GTM &amp; development plan · Appendix · Internal use only, for China-management discussion</footer>
 </body>
 </html>
