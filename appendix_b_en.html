@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Appendix B — Outbound-intel screening methodology (50-account system) · Pearson China Enterprise GTM</title>
+<style>
+:root{
+  --ink:#1c1828; --ink-2:#544c66; --muted:#7a7390;
+  --paper:#fbfaf8; --card:#ffffff; --line:#ece8f1; --line-2:#f3f0f7;
+  --violet:#5b2d91; --violet-deep:#37145f; --violet-2:#7a3fb0; --violet-soft:#f1eaf9;
+  --slate:#9a93a8; --slate-soft:#f3f1f6;
+  --gold:#b9801c; --gold-soft:#f7eed8;
+  --teal:#0f8a78; --rose:#bf4a40;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{margin:0;font-family:"PingFang SC","Microsoft YaHei","Hiragino Sans GB","Source Han Sans SC","Noto Sans CJK SC",sans-serif;color:var(--ink);background:var(--paper);line-height:1.78;font-size:16px;-webkit-font-smoothing:antialiased;word-break:keep-all;overflow-wrap:break-word;}
+a{color:var(--violet);text-decoration:none;}
+a:hover{text-decoration:underline;}
+
+/* Hero */
+.hero{background:linear-gradient(135deg,#ede6f7 0%,#f5f1fa 55%,#ffffff 100%);color:var(--violet-deep);padding:60px 32px 52px;position:relative;overflow:hidden;border-bottom:1px solid var(--line);}
+.hero .motif{position:absolute;right:-60px;top:-60px;width:360px;height:360px;opacity:.35;}
+.hero-inner{max-width:1180px;margin:0 auto;position:relative;z-index:1;}
+.hero .kicker{letter-spacing:.26em;text-transform:uppercase;font-size:12px;color:var(--gold);font-weight:700;}
+.hero h1{font-size:38px;line-height:1.22;margin:14px 0 10px;font-weight:800;letter-spacing:-.01em;text-wrap:balance;}
+.hero .sub{font-size:17px;opacity:1;font-weight:500;max-width:760px;color:var(--ink-2);}
+.hero .meta{margin-top:22px;display:flex;flex-wrap:wrap;gap:10px 26px;font-size:14px;opacity:1;color:var(--muted);}
+.hero .meta b{color:var(--violet);}
+
+/* Top nav */
+.topnav{position:sticky;top:0;z-index:50;background:#fff;display:flex;gap:4px;flex-wrap:wrap;padding:10px 16px;border-bottom:1px solid var(--line);box-shadow:0 2px 12px rgba(55,20,95,.06);}
+.topnav a{color:var(--ink-2);font-size:13px;padding:6px 11px;border-radius:20px;white-space:nowrap;}
+.topnav a:hover{background:var(--violet-soft);color:var(--violet-deep);text-decoration:none;}
+
+main{max-width:1180px;margin:0 auto;padding:0 24px 60px;}
+section{margin:40px 0;scroll-margin-top:64px;}
+h2{font-size:24px;color:var(--violet-deep);border-left:5px solid var(--violet);padding-left:14px;margin:34px 0 16px;font-weight:800;letter-spacing:.01em;text-wrap:balance;scroll-margin-top:70px;}
+h3{font-size:18.5px;color:var(--violet);margin:24px 0 10px;font-weight:700;text-wrap:balance;}
+h4{font-size:14.5px;color:var(--violet-2);margin:0 0 12px;letter-spacing:.02em;font-weight:700;text-wrap:balance;}
+.lead{font-size:16.5px;background:var(--violet-soft);border-radius:10px;padding:14px 18px;color:#3a2358;border-left:4px solid var(--violet);text-wrap:pretty;}
+p,li,td,blockquote{text-wrap:pretty;}
+.muted{color:var(--muted);font-size:14.5px;}
+
+/* TL;DR */
+.tldr{background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden;margin:14px 0;}
+.tldr-row{display:flex;gap:14px;padding:12px 16px;border-bottom:1px solid var(--line-2);}
+.tldr-row:last-child{border-bottom:none;}
+.t-lab{flex:0 0 64px;font-weight:800;color:var(--violet);font-size:14px;}
+.callout{background:var(--gold-soft);border-left:4px solid var(--gold);color:#5a3d05;font-weight:700;padding:14px 18px;border-radius:0 10px 10px 0;margin-top:14px;font-size:15px;}
+blockquote{margin:0;background:#fff;border-left:4px solid var(--violet-soft);padding:12px 16px;border-radius:0 8px 8px 0;color:#4a3a63;font-style:normal;flex:1;min-width:240px;}
+
+/* Charts */
+.chart-wrap{margin:16px 0;}
+.chart-card{background:#fcfbff;border:1px solid var(--line);border-radius:12px;padding:18px;}
+.svg-journey{width:100%;max-width:760px;display:block;margin:0 auto;}
+.jn-num{fill:#fff;font-size:18px;font-weight:800;}
+.jn-stage{fill:var(--violet-deep);font-size:14px;font-weight:700;}
+.jn-prod{fill:var(--ink-2);font-size:11px;}
+.jn-loop{fill:var(--violet-deep);font-size:12.5px;font-weight:700;}
+.jn-gse{fill:var(--muted);font-size:11px;}
+.ax-lab{fill:var(--muted);font-size:12px;}
+.quad-win{fill:var(--violet);font-size:11px;font-weight:700;opacity:.7;}
+.m-lab{fill:#6a6378;font-size:11px;}
+.m-lab-big{fill:var(--violet);font-size:12.5px;font-weight:800;}
+.arr-val{fill:var(--violet-deep);font-size:14px;font-weight:800;}
+.arr-lab{fill:var(--muted);font-size:11px;}
+.arr-tgt{font-size:10.5px;font-weight:700;}
+.pr-num{font-size:15px;font-weight:800;}
+.pr-lab{font-size:12px;font-weight:700;}
+.pr-note{fill:var(--muted);font-size:11.5px;}
+.ind-lab{fill:#4a3a63;font-size:12.5px;}
+.ind-val{fill:var(--violet);font-size:12.5px;font-weight:700;}
+.charts2{display:grid;grid-template-columns:1.3fr 1fr;gap:16px;}
+@media(max-width:760px){.charts2{grid-template-columns:1fr;}}
+
+/* Tables */
+table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14.5px;background:#fff;border-radius:10px;overflow:hidden;}
+th{background:var(--violet);color:#fff;text-align:left;padding:10px 12px;font-weight:700;font-size:13.5px;}
+td{padding:9px 12px;border-bottom:1px solid var(--line-2);vertical-align:top;}
+tbody tr:nth-child(even){background:#faf8fe;}
+tbody tr:hover{background:var(--violet-soft);}
+code{background:var(--violet-soft);padding:1px 6px;border-radius:5px;font-size:13px;color:var(--violet-deep);}
+pre{background:#221733;color:#e9e2f5;padding:16px 18px;border-radius:10px;overflow-x:auto;}
+pre code{background:none;color:inherit;padding:0;}
+
+/* Flow */
+.flow{display:flex;align-items:center;flex-wrap:wrap;gap:6px;margin:12px 0;}
+.flow-step{background:var(--violet);color:#fff;border-radius:10px;padding:10px 12px;font-size:13.5px;font-weight:700;text-align:center;flex:1;min-width:120px;}
+.flow-step span{display:block;font-size:11px;font-weight:400;opacity:.85;margin-top:3px;}
+.flow-arrow{color:var(--violet-2);font-weight:800;}
+
+/* Appendix index cards (main doc) */
+.appx-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:14px 0;}
+.appx-card{display:flex;flex-direction:column;gap:6px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 16px;text-decoration:none;color:inherit;transition:box-shadow .15s,transform .15s;box-shadow:0 2px 8px rgba(55,20,95,.04);}
+.appx-card:hover{box-shadow:0 6px 18px rgba(55,20,95,.12);transform:translateY(-2px);text-decoration:none;}
+.appx-tag{font-size:11px;font-weight:800;letter-spacing:.08em;color:#fff;background:var(--violet);display:inline-block;width:fit-content;padding:2px 9px;border-radius:999px;}
+.appx-title{font-size:15px;font-weight:800;color:var(--violet-deep);}
+.appx-desc{font-size:12.5px;color:var(--muted);line-height:1.6;}
+.appx-open{font-size:12.5px;font-weight:700;color:var(--violet);}
+@media(max-width:760px){.appx-grid{grid-template-columns:1fr;}}
+/* Standalone appendix page */
+body.appx{background:var(--paper);}
+.appx-hero{background:linear-gradient(135deg,#ede6f7 0%,#f5f1fa 55%,#ffffff 100%);color:var(--violet-deep);padding:34px 32px 30px;border-bottom:1px solid var(--line);}
+.appx-hero .kicker{color:var(--violet-2);font-size:12px;font-weight:700;letter-spacing:.12em;}
+.appx-hero h1{margin:8px 0 0;font-size:26px;line-height:1.35;}
+.appx-back{display:inline-block;margin-bottom:14px;font-size:13.5px;font-weight:700;color:var(--violet);background:#fff;border:1px solid var(--line);border-radius:999px;padding:6px 14px;text-decoration:none;}
+.appx-back:hover{background:var(--violet-soft);text-decoration:none;}
+body.appx main{max-width:960px;margin:0 auto;padding:26px 24px 60px;}
+body.appx .appendix{margin:0 0 26px;}
+
+footer{text-align:center;color:var(--muted);font-size:13px;padding:30px;border-top:1px solid var(--line);}
+
+@media print{
+  body{background:#fff;}
+  .topnav{display:none;}
+  .hero{background:#f5f1fa !important;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+  section{break-inside:avoid;}
+  *{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+  @page{margin:14mm;}
+}
+</style>
+</head>
+<body class="appx">
+<header class="appx-hero">
+<a class="appx-back" href="index.html">← Back to main report</a>
+<div class="kicker">Pearson · China Enterprise GTM · Appendix B</div>
+<h1>Appendix B — Outbound-intel screening methodology (50-account system)</h1>
+</header>
+<main><div class="appendix">
+<p><strong>Purpose:</strong> the complete, repeatable screening-and-operations system behind the 50-account engine (Versant assessment + Mondly training, ¥3m+ deals). It consolidates five prior files into one executable framework. Companion data: <code>outbound-intel.csv</code> (master, 14 cols × 50 rows) / <code>outbound-intel.xlsx</code> (visual filter) / <code>outbound-intel-log.md</code> (weekly archive).</p>
+<p><strong>Core assumption:</strong> <em>outbound = language-capability need = Pearson entry point</em>. Every filter runs on three hard metrics: overseas-revenue share / overseas-volume target / large-scale overseas hiring with an English bar.</p>
+<h3 id="1-screening-logic-how-the-50-were-chosen">§1 Screening logic (how the 50 were chosen)</h3>
+<p><strong>Entry conditions</strong> (any one qualifies):</p>
+<p>1. High overseas-revenue share (≥40%, or absolute ≥¥10bn)</p>
+<p>2. Top-tier overseas volume/exports (e.g. top-10 vehicle exports, tier-1 module shipments)</p>
+<p>3. Large-scale overseas employment: overseas plants / subsidiaries / project teams hiring English-as-working-language</p>
+<p>4. Active overseas M&amp;A / plant-build / JV (cross-cultural integration need)</p>
+<p>5. Overseas digital 0→1 (cross-border e-com, overseas warehouse, overseas App)</p>
+<p><strong>Industry pool (distribution of 50):</strong> Medical/Pharma/CXO 10 · New-energy/Auto/Battery 9 · Automotive 7 · Consumer-electronics/Internet/E-com 11 · Construction machinery 4 · Home appliances 4 · Infrastructure 4 · Chemicals 1.</p>
+<p><strong>Exclusion:</strong> no real outbound business/plan; sub-scale workforce.</p>
+<h3 id="2-priority-tiers-p0-p1-p2">§2 Priority tiers (P0 / P1 / P2)</h3>
+<table><thead><tr><th>Tier</th><th>Count</th><th>Bar</th><th>Follow-up</th></tr></thead><tbody><tr><td><strong>P0</strong></td><td>9</td><td>All three hard metrics + active plant-build / M&amp;A / digital-0→1 window</td><td>Diagnostics first, decision-makers first, co-sell first</td></tr><tr><td><strong>P1</strong></td><td>34</td><td>Two metrics hit, high certainty, no forcing window</td><td>Routine monitoring + event-triggered upgrade</td></tr><tr><td><strong>P2</strong></td><td>7</td><td>One metric or still in build-up phase</td><td>Monitor; event-triggered upgrade</td></tr></tbody></table>
+<p>Tiers are dynamic — e.g. the four infrastructure majors (P2) were flagged "effective signal" two weeks running and can be lifted to P1.</p>
+<h3 id="3-weekly-signal-monitoring-monday-automation">§3 Weekly signal monitoring (Monday automation)</h3>
+<p>Four signal types: ① new outbound move / overseas-revenue disclosure · ② executive or HR-lead change · ③ large-scale overseas-role hiring · ④ overseas project / bid / order. Process: read the 50-list → WebSearch each (company + "overseas/international" + last-week keywords) → record signal/implication/next-step → update csv + xlsx + weekly log. ~30 WebSearches per Monday.</p>
+<h3 id="4-decision-maker-mining-find-the-person-who-approves-3m">§4 Decision-maker mining (find the person who approves ¥3m)</h3>
+<p>Maimai is for <em>contacting</em> names, not <em>finding</em> them. Real names live in public sources: ① Qichacha/Tianyancha "key personnel" · ② annual-report/exe pages (Eastmoney/Sina) · ③ HR media (HRflag/LatePost) · ④ Liepin talent pools · ⑤ paid signals (Tanji/Liaoxiao/Yixia) · ⑥ co-sell partners (Beisen/Mercer/WTW/KornFerry/Moka) for warm CHRO intros. Already-identified named decision-makers (public, from 2026-07): Mindray (Li Zaiwen, SVP Global Marketing), BYD (Stella Li), Chery (Zhang Guibing, GM International), Haier (Dr Yu Wentao, Int'l CHRO), ByteDance (Hua Wei/Ronnie, HR lead).</p>
+<h3 id="5-language-readiness-diagnostics-the-hook-v2-depth-v3-consulting">§5 Language-readiness diagnostics (the hook: v2 depth / v3 consulting)</h3>
+<p>A free "outbound talent language-readiness" health-check built from public, verifiable data — used as the first-touch hook. Principles: every count from sampled JDs/public disclosures (sample 15–30 int'l roles); every scorecard dimension cites evidence; every source lists a URL. v3 structure (8 parts): Exec summary · Methodology · Target portrait · Language-need map · LRI scorecard (10 dims × 1–5, AHP-weighted) · Peer benchmark · Risk quantification (gap→money, scenario + ROI) · Soft CTA. Completed: Mindray (v2+v3), BYD/Haier (v3); pending P0: CATL/Chery/Transsion/ByteDance/SHEIN/Midea.</p>
+<h3 id="6-co-sell-bridge-turn-a-name-into-a-meeting">§6 co-sell bridge (turn a name into a meeting)</h3>
+<p>Names are the bullseye (who); co-sell partners are the bridge (how to enter the CHRO room). Partner tiers: <strong>P0</strong> Beisen (clients incl. Chery/Changan; AI interviewer lacks real English test → Versant fills), Mercer (China-to-Global talent + Mettl), Deloitte (China to Global, 2000+ firms/yr). <strong>P1</strong> WTW/KornFerry/Aon, Moka/KNX. <strong>P2</strong> outbound service/SI. 30-day cold-start: W1 internal bridge (BD + existing accounts) · W2 sign 2 co-sell (Beisen/Mercer) · W3 hook with benchmark case + free diagnostic, 15 CHRO/L&amp;D calls · W4 lock "business owner + CHRO" joint meeting for first ¥3m+ deal.</p>
+</div></main>
+</body>
+</html>

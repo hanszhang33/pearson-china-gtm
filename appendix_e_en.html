@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Appendix E — Data sources &amp; footnotes · Pearson China Enterprise GTM</title>
+<style>
+:root{
+  --ink:#1c1828; --ink-2:#544c66; --muted:#7a7390;
+  --paper:#fbfaf8; --card:#ffffff; --line:#ece8f1; --line-2:#f3f0f7;
+  --violet:#5b2d91; --violet-deep:#37145f; --violet-2:#7a3fb0; --violet-soft:#f1eaf9;
+  --slate:#9a93a8; --slate-soft:#f3f1f6;
+  --gold:#b9801c; --gold-soft:#f7eed8;
+  --teal:#0f8a78; --rose:#bf4a40;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{margin:0;font-family:"PingFang SC","Microsoft YaHei","Hiragino Sans GB","Source Han Sans SC","Noto Sans CJK SC",sans-serif;color:var(--ink);background:var(--paper);line-height:1.78;font-size:16px;-webkit-font-smoothing:antialiased;word-break:keep-all;overflow-wrap:break-word;}
+a{color:var(--violet);text-decoration:none;}
+a:hover{text-decoration:underline;}
+
+/* Hero */
+.hero{background:linear-gradient(135deg,#ede6f7 0%,#f5f1fa 55%,#ffffff 100%);color:var(--violet-deep);padding:60px 32px 52px;position:relative;overflow:hidden;border-bottom:1px solid var(--line);}
+.hero .motif{position:absolute;right:-60px;top:-60px;width:360px;height:360px;opacity:.35;}
+.hero-inner{max-width:1180px;margin:0 auto;position:relative;z-index:1;}
+.hero .kicker{letter-spacing:.26em;text-transform:uppercase;font-size:12px;color:var(--gold);font-weight:700;}
+.hero h1{font-size:38px;line-height:1.22;margin:14px 0 10px;font-weight:800;letter-spacing:-.01em;text-wrap:balance;}
+.hero .sub{font-size:17px;opacity:1;font-weight:500;max-width:760px;color:var(--ink-2);}
+.hero .meta{margin-top:22px;display:flex;flex-wrap:wrap;gap:10px 26px;font-size:14px;opacity:1;color:var(--muted);}
+.hero .meta b{color:var(--violet);}
+
+/* Top nav */
+.topnav{position:sticky;top:0;z-index:50;background:#fff;display:flex;gap:4px;flex-wrap:wrap;padding:10px 16px;border-bottom:1px solid var(--line);box-shadow:0 2px 12px rgba(55,20,95,.06);}
+.topnav a{color:var(--ink-2);font-size:13px;padding:6px 11px;border-radius:20px;white-space:nowrap;}
+.topnav a:hover{background:var(--violet-soft);color:var(--violet-deep);text-decoration:none;}
+
+main{max-width:1180px;margin:0 auto;padding:0 24px 60px;}
+section{margin:40px 0;scroll-margin-top:64px;}
+h2{font-size:24px;color:var(--violet-deep);border-left:5px solid var(--violet);padding-left:14px;margin:34px 0 16px;font-weight:800;letter-spacing:.01em;text-wrap:balance;scroll-margin-top:70px;}
+h3{font-size:18.5px;color:var(--violet);margin:24px 0 10px;font-weight:700;text-wrap:balance;}
+h4{font-size:14.5px;color:var(--violet-2);margin:0 0 12px;letter-spacing:.02em;font-weight:700;text-wrap:balance;}
+.lead{font-size:16.5px;background:var(--violet-soft);border-radius:10px;padding:14px 18px;color:#3a2358;border-left:4px solid var(--violet);text-wrap:pretty;}
+p,li,td,blockquote{text-wrap:pretty;}
+.muted{color:var(--muted);font-size:14.5px;}
+
+/* TL;DR */
+.tldr{background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden;margin:14px 0;}
+.tldr-row{display:flex;gap:14px;padding:12px 16px;border-bottom:1px solid var(--line-2);}
+.tldr-row:last-child{border-bottom:none;}
+.t-lab{flex:0 0 64px;font-weight:800;color:var(--violet);font-size:14px;}
+.callout{background:var(--gold-soft);border-left:4px solid var(--gold);color:#5a3d05;font-weight:700;padding:14px 18px;border-radius:0 10px 10px 0;margin-top:14px;font-size:15px;}
+blockquote{margin:0;background:#fff;border-left:4px solid var(--violet-soft);padding:12px 16px;border-radius:0 8px 8px 0;color:#4a3a63;font-style:normal;flex:1;min-width:240px;}
+
+/* Charts */
+.chart-wrap{margin:16px 0;}
+.chart-card{background:#fcfbff;border:1px solid var(--line);border-radius:12px;padding:18px;}
+.svg-journey{width:100%;max-width:760px;display:block;margin:0 auto;}
+.jn-num{fill:#fff;font-size:18px;font-weight:800;}
+.jn-stage{fill:var(--violet-deep);font-size:14px;font-weight:700;}
+.jn-prod{fill:var(--ink-2);font-size:11px;}
+.jn-loop{fill:var(--violet-deep);font-size:12.5px;font-weight:700;}
+.jn-gse{fill:var(--muted);font-size:11px;}
+.ax-lab{fill:var(--muted);font-size:12px;}
+.quad-win{fill:var(--violet);font-size:11px;font-weight:700;opacity:.7;}
+.m-lab{fill:#6a6378;font-size:11px;}
+.m-lab-big{fill:var(--violet);font-size:12.5px;font-weight:800;}
+.arr-val{fill:var(--violet-deep);font-size:14px;font-weight:800;}
+.arr-lab{fill:var(--muted);font-size:11px;}
+.arr-tgt{font-size:10.5px;font-weight:700;}
+.pr-num{font-size:15px;font-weight:800;}
+.pr-lab{font-size:12px;font-weight:700;}
+.pr-note{fill:var(--muted);font-size:11.5px;}
+.ind-lab{fill:#4a3a63;font-size:12.5px;}
+.ind-val{fill:var(--violet);font-size:12.5px;font-weight:700;}
+.charts2{display:grid;grid-template-columns:1.3fr 1fr;gap:16px;}
+@media(max-width:760px){.charts2{grid-template-columns:1fr;}}
+
+/* Tables */
+table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14.5px;background:#fff;border-radius:10px;overflow:hidden;}
+th{background:var(--violet);color:#fff;text-align:left;padding:10px 12px;font-weight:700;font-size:13.5px;}
+td{padding:9px 12px;border-bottom:1px solid var(--line-2);vertical-align:top;}
+tbody tr:nth-child(even){background:#faf8fe;}
+tbody tr:hover{background:var(--violet-soft);}
+code{background:var(--violet-soft);padding:1px 6px;border-radius:5px;font-size:13px;color:var(--violet-deep);}
+pre{background:#221733;color:#e9e2f5;padding:16px 18px;border-radius:10px;overflow-x:auto;}
+pre code{background:none;color:inherit;padding:0;}
+
+/* Flow */
+.flow{display:flex;align-items:center;flex-wrap:wrap;gap:6px;margin:12px 0;}
+.flow-step{background:var(--violet);color:#fff;border-radius:10px;padding:10px 12px;font-size:13.5px;font-weight:700;text-align:center;flex:1;min-width:120px;}
+.flow-step span{display:block;font-size:11px;font-weight:400;opacity:.85;margin-top:3px;}
+.flow-arrow{color:var(--violet-2);font-weight:800;}
+
+/* Appendix index cards (main doc) */
+.appx-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:14px 0;}
+.appx-card{display:flex;flex-direction:column;gap:6px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 16px;text-decoration:none;color:inherit;transition:box-shadow .15s,transform .15s;box-shadow:0 2px 8px rgba(55,20,95,.04);}
+.appx-card:hover{box-shadow:0 6px 18px rgba(55,20,95,.12);transform:translateY(-2px);text-decoration:none;}
+.appx-tag{font-size:11px;font-weight:800;letter-spacing:.08em;color:#fff;background:var(--violet);display:inline-block;width:fit-content;padding:2px 9px;border-radius:999px;}
+.appx-title{font-size:15px;font-weight:800;color:var(--violet-deep);}
+.appx-desc{font-size:12.5px;color:var(--muted);line-height:1.6;}
+.appx-open{font-size:12.5px;font-weight:700;color:var(--violet);}
+@media(max-width:760px){.appx-grid{grid-template-columns:1fr;}}
+/* Standalone appendix page */
+body.appx{background:var(--paper);}
+.appx-hero{background:linear-gradient(135deg,#ede6f7 0%,#f5f1fa 55%,#ffffff 100%);color:var(--violet-deep);padding:34px 32px 30px;border-bottom:1px solid var(--line);}
+.appx-hero .kicker{color:var(--violet-2);font-size:12px;font-weight:700;letter-spacing:.12em;}
+.appx-hero h1{margin:8px 0 0;font-size:26px;line-height:1.35;}
+.appx-back{display:inline-block;margin-bottom:14px;font-size:13.5px;font-weight:700;color:var(--violet);background:#fff;border:1px solid var(--line);border-radius:999px;padding:6px 14px;text-decoration:none;}
+.appx-back:hover{background:var(--violet-soft);text-decoration:none;}
+body.appx main{max-width:960px;margin:0 auto;padding:26px 24px 60px;}
+body.appx .appendix{margin:0 0 26px;}
+
+footer{text-align:center;color:var(--muted);font-size:13px;padding:30px;border-top:1px solid var(--line);}
+
+@media print{
+  body{background:#fff;}
+  .topnav{display:none;}
+  .hero{background:#f5f1fa !important;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+  section{break-inside:avoid;}
+  *{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+  @page{margin:14mm;}
+}
+</style>
+</head>
+<body class="appx">
+<header class="appx-hero">
+<a class="appx-back" href="index.html">← Back to main report</a>
+<div class="kicker">Pearson · China Enterprise GTM · Appendix E</div>
+<h1>Appendix E — Data sources &amp; footnotes</h1>
+</header>
+<main><div class="appendix">
+<ul><li><strong>&gt;50% talent-shortage challenge:</strong> McKinsey, 2025 (Chinese-enterprise internationalisation survey).</li><li><strong>78% "talent fault line" / 45% cross-cultural delays:</strong> Neeley (Harvard Business School), 2025 — single-firm, 8-country study (n≈3,500), not a 2026 industry census; "language is the #1 blocker" is inferred, not verbatim.</li><li><strong>Market &gt;¥30bn / CAGR &gt;20%:</strong> Pearson China <em>Going-Global English Capability Research Report</em> (internal), 2026.</li><li><strong>40% expat-failure rate:</strong> industry survey (independently verify before external use).</li><li><strong>50-account list &amp; screening methodology:</strong> sourced from the Pearson China library (nodes <code>d77y2ghlY9I2BnAt1SeWL5</code> and <code>yqIDDxX5kZeCYFCUNqo2eO</code>); the running engine is founder-led and not yet institutionalised.</li><li><strong>Group ammunition (ELS team, Mondly pivot, AWS, Lost in Transition):</strong> Pearson FY25 Annual Report, earnings calls, and hub.pearson.com (captured 19 Aug 2026).</li></ul>
+</div></main>
+</body>
+</html>
